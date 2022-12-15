@@ -1,0 +1,32 @@
+.trackInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start
+}
+
+.title {
+    color: var(--titleColor);
+    font-size: 28px;
+}
+.artist,
+.album {
+    font-size: 22px;
+}
+.artist {
+    color: var(--titleColor);
+    /* text-shadow: 0 0 20px var(--artistColor); */
+}
+.album {
+    color: var(--albumColor);
+    font-style: italic;
+}
+
+@media only screen and (max-width: 600px) {
+    .title,
+    .artist,
+    .album {
+        width: 100%;
+        text-align: center;
+    }
+}
