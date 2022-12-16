@@ -1,20 +1,22 @@
+import styles from "./NavBar.module.css"
+
 function NavBar() {
 
     return (
-        <div className="navbar-wrapper">
-            <div className="navbar-logo">
+        <div className={styles.wrapper}>
+            <div className={styles.logoWrapper}>
                 <a href="https://vitejs.dev" target="_blank">
-                    <img src="../vite.svg" className="logo" alt="Vite logo" />
+                    <img src="../vite.svg" className={styles.logo} alt="Vite logo" />
                 </a>
             </div>
-            <div className="navbar-nav">
+            <div className={styles.nav}>
                 <ul>
                     <li><a href="#projects"></a></li>
                     <li><a href="#music"></a></li>
                     <li><a href="#contact"></a></li>
                 </ul>
             </div>
-            <div className="navbar-hamburger"></div>
+            <div className={styles.hamburger}></div>
         </div>
     )
 }

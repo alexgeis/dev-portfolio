@@ -1,13 +1,5 @@
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-}
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
 
-.navbar-wrapper {
+.wrapper {
     position: -webkit-sticky;
     position: sticky;
     width: 100%;
@@ -19,28 +11,37 @@
     z-index: 1001;
 }
 
-.navbar-logo {
+.logoWrapper {
     display: flex;
     align-items: center;
     z-index: 1002;
 }
 
-.navbar-hamburger {
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.hamburger {
     display: flex;
     align-items: center;
     z-index: 1002;
 }
 
 @media only screen and (min-width: 600px){
-    .navbar-nav {
+    .nav {
         display: flex;
         align-items: center;
         display: none;
     }
-    .navbar-hamburger {
+    .hamburger {
         display: none;
-        // display: flex;
-        // align-items: center;
-        // margin: 0 20px;
+        /* display: flex;
+        align-items: center;
+        margin: 0 20px; */
     }
 }
