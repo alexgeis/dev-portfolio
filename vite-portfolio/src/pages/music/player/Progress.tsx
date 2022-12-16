@@ -1,6 +1,13 @@
 import styles from "./Progress.module.css";
 
-export const Progress = ({ value, onChange, onMouseUp, onTouchEnd }) => {
+type ProgressProps = {
+	value: number;
+	onChange: any; //TODO: better data type for these mouse events
+	onMouseUp: any;
+	onTouchEnd: any;
+};
+
+export const Progress = ({ value, onChange, onMouseUp, onTouchEnd }: ProgressProps): JSX.Element => {
 	return (
 		<div className={styles.container}>
 			<input

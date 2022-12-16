@@ -1,6 +1,12 @@
 import styles from "./TrackInfo.module.css";
 
-export const TrackInfo = ({ title, artist = "", album = "" }) => {
+type TrackInfoProps = {
+	title: string;
+	artist: string;
+	album: string;
+}
+
+export const TrackInfo = ({ title, artist = "", album = "" }: TrackInfoProps): JSX.Element => {
 	return (
 		<div className={styles.trackInfoWrapper}>
 			<h1 className={styles.title}>{title}</h1>

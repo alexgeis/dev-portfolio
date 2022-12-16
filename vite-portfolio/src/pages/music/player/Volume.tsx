@@ -1,6 +1,11 @@
 import styles from "./Volume.module.css";
 
-export const Volume = ({ onChange, value }) => {
+type VolumeProps = {
+	onChange?: any; // TODO: FIND BETTER TYPE FOR ONCHANGE EVENT HANDLE
+	value: number;
+}
+
+export const Volume = ({ onChange, value }: VolumeProps): JSX.Element => {
 	return (
 		<div className={styles.wrapper}>
 			<input
