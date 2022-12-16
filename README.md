@@ -1,4 +1,4 @@
-Search and replace keywords: `deployed_link`, `product-screenshot`, `repo_name`, `project_title`, `project_description`
+Search and replace keywords: `deployed_link`, `product-screenshot`, `dev-portfolio`, `Developer Portfolio`, `project_description`
 
 <div id="top"></div>
 
@@ -21,23 +21,23 @@ Search and replace keywords: `deployed_link`, `product-screenshot`, `repo_name`,
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/alexgeis/repo_name">
+  <a href="https://github.com/alexgeis/dev-portfolio">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Developer Portfolio</h3>
 
   <p align="center">
-    project_description
+    Showcase of my development and music projects
     <br />
-    <a href="https://github.com/alexgeis/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/alexgeis/dev-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a class="deployed_link" href="https://github.com/alexgeis/repo_name">View Demo</a>
+    <a class="deployed_link" href="https://github.com/alexgeis/dev-portfolio">View Demo</a>
     ·
-    <a href="https://github.com/alexgeis/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/alexgeis/dev-portfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alexgeis/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/alexgeis/dev-portfolio/issues">Request Feature</a>
   </p>
 </div>
 
@@ -84,14 +84,16 @@ style="display: block;
 
 ### Built With
 
-- [Webpack](https://webpack.js.org/)
 - [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
-- [Node.js](https://nodejs.dev/)
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [MySQL](https://www.mysql.com/)
-- [JQuery](https://jquery.com)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+  <!-- - [Webpack](https://webpack.js.org/) -->
+  <!-- - [Bootstrap](https://getbootstrap.com) -->
+  <!-- - [Node.js](https://nodejs.dev/) -->
+  <!-- - [Express](https://expressjs.com/) -->
+  <!-- - [MongoDB](https://www.mongodb.com/) -->
+  <!-- - [MySQL](https://www.mysql.com/) -->
+  <!-- - [JQuery](https://jquery.com) -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -129,7 +131,7 @@ Packages used in this project: -->
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/alexgeis/repo_name.git
+   git clone https://github.com/alexgeis/dev-portfolio.git
    ```
 2. Install NPM packages
    ```sh
@@ -148,7 +150,7 @@ Packages used in this project: -->
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/alexgeis/repo_name.git
+   git clone https://github.com/alexgeis/dev-portfolio.git
    ```
 3. Install NPM packages
    ```sh
@@ -175,12 +177,26 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [x] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] NavBar
+- [ ] Home Page
+  - [ ] Hero
+  - [ ] Projects
+  - [ ] Music?
+  - [ ] Contact
+- [ ] Footer
+- [ ] Project Page
+  - [ ] Projects
+- [ ] Music Page
+  - [ ] Albums
+  - [ ] tags
+  - [ ] search
+  - [ ] player
+  - [ ] playlist
+- [ ] Contact Page
+  - [ ] Form
+  - [ ] img
 
-See the [open issues](https://github.com/alexgeis/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/alexgeis/dev-portfolio/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -222,7 +238,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Alex Geis - siegxela@gmail.com
 
-Project Link: [https://github.com/alexgeis/repo_name](https://github.com/alexgeis/repo_name)
+Project Link: [https://github.com/alexgeis/dev-portfolio](https://github.com/alexgeis/dev-portfolio)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -234,30 +250,30 @@ Helpful resources and kudos.
 
 - [Choose an Open Source License](https://choosealicense.com)
 - [Img Shields](https://shields.io)
-- [GitHub Pages](https://pages.github.com)
+<!-- - [GitHub Pages](https://pages.github.com)
 - [Font Awesome](https://fontawesome.com)
 - [React Icons](https://react-icons.github.io/react-icons/search)
 - [Markdown Studio](https://readme.so/editor)
 - []()
-- []()
-- []()
+- []() -->
+<!-- - []() -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-<!-- [contributors-shield]: https://img.shields.io/github/contributors/alexgeis/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/alexgeis/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alexgeis/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/alexgeis/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/alexgeis/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/alexgeis/repo_name/stargazers -->
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/alexgeis/dev-portfolio.svg?style=for-the-badge
+[contributors-url]: https://github.com/alexgeis/dev-portfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alexgeis/dev-portfolio.svg?style=for-the-badge
+[forks-url]: https://github.com/alexgeis/dev-portfolio/network/members
+[stars-shield]: https://img.shields.io/github/stars/alexgeis/dev-portfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/alexgeis/dev-portfolio/stargazers -->
 
-[issues-shield]: https://img.shields.io/github/issues/alexgeis/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/alexgeis/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/alexgeis/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/alexgeis/repo_name/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/alexgeis/dev-portfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/alexgeis/dev-portfolio/issues
+[license-shield]: https://img.shields.io/github/license/alexgeis/dev-portfolio.svg?style=for-the-badge
+[license-url]: https://github.com/alexgeis/dev-portfolio/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alexngeis
 [product-screenshot]: images/screenshot.png
