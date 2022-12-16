@@ -1,6 +1,11 @@
 import styles from "./Next.module.css";
 
-export const Next = ({ src, onClick }) => {
+type NextProps = {
+	src: string;
+	onClick?: React.MouseEventHandler;
+}
+
+export const Next = ({ src, onClick }: NextProps): JSX.Element => {
 	return (
 		<img
 			className={styles.next}

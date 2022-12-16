@@ -1,6 +1,11 @@
 import styles from "./Loop.module.css";
 
-export const Loop = ({ src, onClick }) => {
+type LoopProps = {
+	src: string;
+	onClick?: React.MouseEventHandler;
+};
+
+export const Loop = ({ src, onClick }: LoopProps): JSX.Element => {
 	return (
 		<img
 			className={styles.loop}

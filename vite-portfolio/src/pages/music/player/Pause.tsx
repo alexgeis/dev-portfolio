@@ -1,6 +1,11 @@
 import styles from "./Pause.module.css";
 
-export const Pause = ({ src, onClick }) => {
+type PauseProps = {
+	src: string;
+	onClick?: React.MouseEventHandler;
+}
+
+export const Pause = ({ src, onClick }: PauseProps): JSX.Element => {
 	return (
 		<img
 			className={styles.pause}

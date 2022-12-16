@@ -2,9 +2,9 @@ import styles from "./Progress.module.css";
 
 type ProgressProps = {
 	value: number;
-	onChange: any; //TODO: better data type for these mouse events
-	onMouseUp: any;
-	onTouchEnd: any;
+	onChange?: any; //TODO: better data type for these mouse events
+	onMouseUp?: any;
+	onTouchEnd?: any;
 };
 
 export const Progress = ({ value, onChange, onMouseUp, onTouchEnd }: ProgressProps): JSX.Element => {

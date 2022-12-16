@@ -1,6 +1,11 @@
 import styles from "./Previous.module.css";
 
-export const Previous = ({ src, onClick }) => {
+type PreviousProps = {
+	src: string;
+	onClick?: React.MouseEventHandler
+}
+
+export const Previous = ({ src, onClick }: PreviousProps): JSX.Element => {
 	return (
 		<img
 			className={styles.previous}

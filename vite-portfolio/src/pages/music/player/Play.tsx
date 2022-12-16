@@ -1,6 +1,11 @@
 import styles from "./Play.module.css";
 
-export const Play = ({ src, onClick }) => {
+type PlayProps = {
+	src: string;
+	onClick?: React.MouseEventHandler;
+}
+
+export const Play = ({ src, onClick }: PlayProps): JSX.Element => {
 	return (
 		<img
 			className={styles.play}
