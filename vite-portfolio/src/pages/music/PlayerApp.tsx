@@ -49,17 +49,28 @@ type TrackList = {
 }
 
 export const Player = ({ trackList }: TrackList) => {
-	const [audio, setAudio] = useState(null);
+	type Audio = {
+		src?: string;
+		volume?: number;
+		currentTime?: number;
+		duration: number;
+		play?: any;
+		pause?: any;
+		addEventListener?: any;
+	}
+	const [audio, setAudio] = useState<Audio | null>(null);
+	//TODO: better types for audio
+
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [hasEnded, setHasEnded] = useState(false);
 	const [title, setTitle] = useState("");
 	const [artist, setArtist] = useState("");
 	const [album, setAlbum] = useState("");
-	const [length, setLength] = useState(0);
-	const [time, setTime] = useState(0);
+	const [length, setLength] = useState<number | undefined>(0);
+	const [time, setTime] = useState<number | undefined>(0);
 	const [slider, setSlider] = useState(1);
 	const [drag, setDrag] = useState(0);
-	const [volume, setVolume] = useState(0.8);
+	const [volume, setVolume] = useState<number | undefined>(0.8);
 	const [shuffled, setShuffled] = useState(false);
 	const [looped, setLooped] = useState(false);
 
@@ -79,7 +90,7 @@ export const Player = ({ trackList }: TrackList) => {
 	});
 	// create new Audio instance and update info
 	useEffect(() => {
-		const audio = new Audio(trackList[curTrack].url);
+		const audio: Audio = new Audio(trackList[curTrack].url);
 
 		const setAudioData = () => {
 			setLength(audio.duration);
@@ -87,11 +98,14 @@ export const Player = ({ trackList }: TrackList) => {
 		};
 
 		const setAudioTime = () => {
-			const curTime: number = audio.currentTime;
+			const curTime: number | undefined = audio.currentTime;
 			setTime(curTime);
 			
-			const curDuration: number = audio.duration;
-			const sliderPos: number = curTime ? ((curTime * 100) / curDuration).toFixed(1) : 0
+			const curDuration: number | undefined  = audio.duration;
+			const sliderPos: any = curTime && curDuration 
+					? ((curTime * 100) / curDuration).toFixed(1) 
+					: 0
+			//TODO: better type for sliderPos
 			setSlider(sliderPos);
 		};
 
@@ -163,13 +177,17 @@ export const Player = ({ trackList }: TrackList) => {
 	};
 
 	const play = () => {
-		setIsPlaying(true);
-		audio.play();
+		if (audio != null) {
+			setIsPlaying(true);
+			audio.play();
+		}
 	};
 
 	const pause = () => {
-		setIsPlaying(false);
-		audio.pause();
+		if (audio != null) {
+			setIsPlaying(false);
+			audio.pause();
+		}
 	};
 
 	const next = () => {
