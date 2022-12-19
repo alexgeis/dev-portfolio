@@ -4,6 +4,8 @@ declare module '*.woff2';
 declare module '*.woff';
 declare module '*.ttf';
 
+declare module '*.wav';
+
 declare module '*.svg' {
   import React = require('react');
 
