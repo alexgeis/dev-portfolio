@@ -51,7 +51,7 @@ type TrackList = {
 export const Player = ({ trackList }: TrackList) => {
 	type Audio = {
 		src?: string;
-		volume?: number;
+		volume: any;
 		currentTime?: number;
 		duration: number;
 		play?: any;
@@ -59,7 +59,7 @@ export const Player = ({ trackList }: TrackList) => {
 		addEventListener?: any;
 	}
 	const [audio, setAudio] = useState<Audio | null>(null);
-	//TODO: better types for audio
+	//TODO: better types for audio - especially volume
 
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [hasEnded, setHasEnded] = useState(false);
@@ -76,7 +76,7 @@ export const Player = ({ trackList }: TrackList) => {
 
 	// playlist
 	let playlist: any[] = [];
-	const [filter, setFilter] = useState([]);
+	const [filter, setFilter] = useState<string[]>([]);
 	let [curTrack, setCurTrack] = useState(0);
 	const [query, updateQuery] = useState("");
 	// add all available tags to tags[]
@@ -201,14 +201,14 @@ export const Player = ({ trackList }: TrackList) => {
 		setShuffled(!shuffled);
 	};
 
-	const shufflePlaylist = (arr) => {
+	const shufflePlaylist = (arr: any[]): any[] => {
 		if (arr.length === 1) return arr;
 		const rand = Math.floor(Math.random() * arr.length);
 		return [arr[rand], ...shufflePlaylist(arr.filter((_, i) => i !== rand))];
 	};
 
-	const tagClickHandler = (e) => {
-		const tag = e.currentTarget.innerHTML;
+	const tagClickHandler = (e: any) => {
+		const tag: string = e.currentTarget.innerHTML;
 		if (!filter.includes(tag)) {
 			setFilter([...filter, tag]);
 		} else {
@@ -216,8 +216,8 @@ export const Player = ({ trackList }: TrackList) => {
 			setFilter([...filteredArray]);
 		}
 	};
-
-	const playlistItemClickHandler = (e) => {
+	//TODO: better type for tagClickHandler & playlistItemClickHandler events
+	const playlistItemClickHandler = (e: any) => {
 		const num = Number(e.currentTarget.getAttribute("data-key"));
 		const index = playlist.indexOf(num);
 		setCurTrack((curTrack = playlist[index]));
@@ -242,7 +242,7 @@ export const Player = ({ trackList }: TrackList) => {
 			</TagsTemplate>
 			<Search
 				value={query}
-				onChange={(e) => updateQuery(e.target.value.toLowerCase())}
+				onChange={(e: any) => updateQuery(e.target.value.toLowerCase())}
 				placeholder={`Search ${trackList.length} tracks...`}
 			/>
 			<PlayerTemplate>
@@ -256,7 +256,7 @@ export const Player = ({ trackList }: TrackList) => {
 				</TrackInfoAndTimeBox>
 				<Progress
 					value={slider}
-					onChange={(e) => {
+					onChange={(e: any) => {
 						setSlider(e.target.value);
 						setDrag(e.target.value);
 					}}
@@ -280,7 +280,7 @@ export const Player = ({ trackList }: TrackList) => {
 					</ButtonsBox>
 					<Volume
 						value={volume}
-						onChange={(e) => {
+						onChange={(e: any) => {
 							setVolume(e.target.value / 100);
 						}}
 					/>

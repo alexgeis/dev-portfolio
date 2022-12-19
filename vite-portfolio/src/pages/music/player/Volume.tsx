@@ -2,7 +2,7 @@ import styles from "./Volume.module.css";
 
 type VolumeProps = {
 	onChange?: any; // TODO: FIND BETTER TYPE FOR ONCHANGE EVENT HANDLE
-	value: number;
+	value: any; // TODO: FIND BETTER TYPE FOR ONCHANGE EVENT HANDLE
 }
 
 export const Volume = ({ onChange, value }: VolumeProps): JSX.Element => {
