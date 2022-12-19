@@ -135,4 +135,3 @@ const theWorldGoesClarifying = [
 ];
 
 export const tracks = [...immachination, ...theWorldGoesClarifying];
-console.log(tracks);

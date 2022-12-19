@@ -1,0 +1,23 @@
+{
+  "name": "dev-portfolio",
+  "version": "1.0.0",
+  "description": "Search and replace keywords: `deployed_link`, `product-screenshot`, `dev-portfolio`, `Developer Portfolio`, `project_description`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd vite-portfolio && npm run dev",
+    "build": "cd vite-portfolio && npm run build",
+    "preview": "cd vite-portfolio && npm run preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgeis/dev-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexgeis/dev-portfolio/issues"
+  },
+  "homepage": "https://github.com/alexgeis/dev-portfolio#readme"
+}

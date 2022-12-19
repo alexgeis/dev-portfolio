@@ -1,43 +1,54 @@
 import { useState, useEffect, useRef } from "react";
 
-import { PageTemplate } from "./components/PageTemplate";
+import { PageTemplate } from "../PageTemplate";
 // tags
-import { TagsTemplate } from "./components/tags/TagsTemplate";
-import { TagItem } from "./components/tags/TagItem";
+import { TagsTemplate } from "./tags/TagsTemplate";
+import { TagItem } from "./tags/TagItem";
 // search
-import { Search } from "./components/search/Search";
+import { Search } from "./search/Search";
 // player
-import { PlayerTemplate } from "./components/player/PlayerTemplate";
-import { TrackInfoAndTimeBox } from "./components/player/TrackInfoAndTimeBox";
-import { TrackInfo } from "./components/player/TrackInfo";
-import { Time } from "./components/player/Time";
-import { Progress } from "./components/player/Progress";
-import { ButtonsAndVolumeBox } from "./components/player/ButtonsAndVolumeBox";
-import { ButtonsBox } from "./components/player/ButtonsBox";
-import { Loop } from "./components/player/Loop";
-import { Previous } from "./components/player/Previous";
-import { Play } from "./components/player/Play";
-import { Pause } from "./components/player/Pause";
-import { Next } from "./components/player/Next";
-import { Shuffle } from "./components/player/Shuffle";
-import { Volume } from "./components/player/Volume";
+import { PlayerTemplate } from "./player/PlayerTemplate";
+import { TrackInfoAndTimeBox } from "./player/TrackInfoAndTimeBox";
+import { TrackInfo } from "./player/TrackInfo";
+import { Time } from "./player/Time";
+import { Progress } from "./player/Progress";
+import { ButtonsAndVolumeBox } from "./player/ButtonsAndVolumeBox";
+import { ButtonsBox } from "./player/ButtonsBox";
+import { Loop } from "./player/Loop";
+import { Previous } from "./player/Previous";
+import { Play } from "./player/Play";
+import { Pause } from "./player/Pause";
+import { Next } from "./player/Next";
+import { Shuffle } from "./player/Shuffle";
+import { Volume } from "./player/Volume";
 // playlist
-import { PlaylistTemplate } from "./components/playlist/PlaylistTemplate";
-import { PlaylistItem } from "./components/playlist/PlaylistItem";
-
-import loopCurrentBtn from "./assets/icons/loop_current.png";
-import loopNoneBtn from "./assets/icons/loop_none.png";
-import previousBtn from "./assets/icons/previous.png";
-import playBtn from "./assets/icons/play.png";
-import pauseBtn from "./assets/icons/pause.png";
-import nextBtn from "./assets/icons/next.png";
-import shuffleAllBtn from "./assets/icons/shuffle_all.png";
-import shuffleNoneBtn from "./assets/icons/shuffle_none.png";
+import { PlaylistTemplate } from "./playlist/PlaylistTemplate";
+import { PlaylistItem } from "./playlist/PlaylistItem";
+// player icons
+import loopCurrentBtn from "../../assets/icons/loop_current.png";
+import loopNoneBtn from "../../assets/icons/loop_none.png";
+import previousBtn from "../../assets/icons/previous.png";
+import playBtn from "../../assets/icons/play.png";
+import pauseBtn from "../../assets/icons/pause.png";
+import nextBtn from "../../assets/icons/next.png";
+import shuffleAllBtn from "../../assets/icons/shuffle_all.png";
+import shuffleNoneBtn from "../../assets/icons/shuffle_none.png";
 
 // const fmtMSS = (s) => new Date(1000 * s).toISOString().substr(15, 4);
-const fmtMSS = (s) => new Date(1000 * s).toISOString().substring(15, 19);
+const fmtMSS = (s: number) => new Date(1000 * s).toISOString().substring(15, 19);
 
-export const Player = ({ trackList }) => {
+type TrackListProps = {
+	url: string;
+	title: string;
+	artist: string;
+	album: string;
+	tags: string[];
+}
+type TrackList = {
+	trackList: TrackListProps[];
+}
+
+export const Player = ({ trackList }: TrackList) => {
 	const [audio, setAudio] = useState(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [hasEnded, setHasEnded] = useState(false);
@@ -53,13 +64,13 @@ export const Player = ({ trackList }) => {
 	const [looped, setLooped] = useState(false);
 
 	// playlist
-	let playlist = [];
+	let playlist: any[] = [];
 	const [filter, setFilter] = useState([]);
 	let [curTrack, setCurTrack] = useState(0);
 	const [query, updateQuery] = useState("");
 	// add all available tags to tags[]
-	const tags = [];
-	trackList.forEach((track) => {
+	const tags: any[] = [];
+	trackList.forEach((track: TrackListProps) => {
 		track.tags.forEach((tag) => {
 			if (!tags.includes(tag)) {
 				tags.push(tag);
@@ -76,9 +87,12 @@ export const Player = ({ trackList }) => {
 		};
 
 		const setAudioTime = () => {
-			const curTime = audio.currentTime;
+			const curTime: number = audio.currentTime;
 			setTime(curTime);
-			setSlider(curTime ? ((curTime * 100) / audio.duration).toFixed(1) : 0);
+			
+			const curDuration: number = audio.duration;
+			const sliderPos: number = curTime ? ((curTime * 100) / curDuration).toFixed(1) : 0
+			setSlider(sliderPos);
 		};
 
 		const setAudioVolume = () => setVolume(audio.volume);
@@ -99,7 +113,7 @@ export const Player = ({ trackList }) => {
 			audio.pause();
 		};
 	}, []);
-
+	// using curTrack as a useEffect dependency, update audio source and title
 	useEffect(() => {
 		if (audio != null) {
 			audio.src = trackList[curTrack].url;
@@ -107,7 +121,7 @@ export const Player = ({ trackList }) => {
 			play();
 		}
 	}, [curTrack]);
-
+	// using hasEnded as a useEffect dependency, update playlist, if shuffled, or loop song, if active
 	useEffect(() => {
 		if (audio != null) {
 			if (shuffled) {
@@ -116,13 +130,13 @@ export const Player = ({ trackList }) => {
 			!looped ? next() : play();
 		}
 	}, [hasEnded]);
-
+	// using volume as a useEffect dependency, update audio volume
 	useEffect(() => {
 		if (audio != null) {
 			audio.volume = volume;
 		}
 	}, [volume]);
-
+	// using drag as a useEffect dependency, update audio time to match drag position
 	useEffect(() => {
 		if (audio != null) {
 			pause();
@@ -130,7 +144,7 @@ export const Player = ({ trackList }) => {
 			audio.currentTime = val;
 		}
 	}, [drag]);
-
+	// using filter as a useEffect dependency, update audio track to the first within the newly filtered playlist
 	useEffect(() => {
 		if (!playlist.includes(curTrack)) {
 			setCurTrack((curTrack = playlist[0]));
