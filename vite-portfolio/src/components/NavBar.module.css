@@ -17,12 +17,28 @@
 }
 
 .logo {
-    height: 6em;
-    padding: 1.5em;
+    /* height: 6em;
+    padding: 1.5em; */
+    /* font-family: Poppins,sans-serif; */
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 26px;
     will-change: filter;
 }
 .logo:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.nav {
+    display: none;
+    box-sizing: border-box;
+}
+.navLink {
+    color: var(--whiteColor);
+    padding: 10px 0;
+    margin: 0 20px;
+    /* font-family: Poppins,sans-serif; */
 }
 
 .hamburger {
@@ -35,7 +51,7 @@
     .nav {
         display: flex;
         align-items: center;
-        display: none;
+        /* display: none; */
     }
     .hamburger {
         display: none;

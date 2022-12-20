@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 :root {
@@ -35,22 +36,22 @@
 
 a {
   font-weight: 500;
-  color: var(--linkColor);
-  text-decoration: inherit;
+  color: var(--whiteColor);
+  /* text-decoration: none; */
 }
 a:hover {
   color: var(--linkHover);
 }
 
 body {
-  margin: 0;
+  /* margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
   background-color: var(--backgroundDark);
-  color: var(--whiteColor);
-  
+  /* color: var(--whiteColor); */
+  overflow-x: hidden;
 }
 
 h1 {
