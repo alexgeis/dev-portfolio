@@ -15,7 +15,7 @@ export const AppTemplate: React.FC<Props> = ({ children }) => {
         <div className={styles.wrapper}>
           <NavBar />
           {children}
-          <Player trackList={tracks} />
+          {/* <Player trackList={tracks} /> */}
           <Footer />
         </div>
   )
