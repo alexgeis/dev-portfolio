@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css"
 
-function NavBar() {
+export function NavBar() {
 
     return (
         <div className={styles.wrapper}>
@@ -20,5 +20,3 @@ function NavBar() {
         </div>
     )
 }
-
-export default NavBar;

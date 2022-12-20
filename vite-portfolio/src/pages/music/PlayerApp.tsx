@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import { PageTemplate } from "../PageTemplate";
+import { AppTemplate } from "../../App";
 // tags
 import { TagsTemplate } from "./tags/TagsTemplate";
 import { TagItem } from "./tags/TagItem";
@@ -25,14 +25,14 @@ import { Volume } from "./player/Volume";
 import { PlaylistTemplate } from "./playlist/PlaylistTemplate";
 import { PlaylistItem } from "./playlist/PlaylistItem";
 // player icons
-import loopCurrentBtn from "../../assets/icons/loop_current.png";
-import loopNoneBtn from "../../assets/icons/loop_none.png";
-import previousBtn from "../../assets/icons/previous.png";
-import playBtn from "../../assets/icons/play.png";
-import pauseBtn from "../../assets/icons/pause.png";
-import nextBtn from "../../assets/icons/next.png";
-import shuffleAllBtn from "../../assets/icons/shuffle_all.png";
-import shuffleNoneBtn from "../../assets/icons/shuffle_none.png";
+import loopCurrentBtn from "../../assets/icons/player/loop_current.png";
+import loopNoneBtn from "../../assets/icons/player/loop_none.png";
+import previousBtn from "../../assets/icons/player/previous.png";
+import playBtn from "../../assets/icons/player/play.png";
+import pauseBtn from "../../assets/icons/player/pause.png";
+import nextBtn from "../../assets/icons/player/next.png";
+import shuffleAllBtn from "../../assets/icons/player/shuffle_all.png";
+import shuffleNoneBtn from "../../assets/icons/player/shuffle_none.png";
 
 // const fmtMSS = (s) => new Date(1000 * s).toISOString().substr(15, 4);
 const fmtMSS = (s: number) => new Date(1000 * s).toISOString().substring(15, 19);
@@ -225,7 +225,7 @@ export const Player = ({ trackList }: TrackList) => {
 	};
 
 	return (
-		<PageTemplate>
+		<AppTemplate>
 			<TagsTemplate>
 				{tags.map((tag, index) => {
 					return (
@@ -310,6 +310,6 @@ export const Player = ({ trackList }: TrackList) => {
 						}
 					})}
 			</PlaylistTemplate>
-		</PageTemplate>
+		</AppTemplate>
 	);
 };
