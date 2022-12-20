@@ -21,4 +21,12 @@ declare module '*.module.css' {
 }
 declare module "*.module.scss";
 
+function createBrowserRouter(
+  routes: RouteObject[],
+  opts?: {
+    basename?: string;
+    window?: Window;
+  }
+): RemixRouter;
+
 /// <reference types="vite/client" />
