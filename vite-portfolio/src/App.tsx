@@ -1,9 +1,9 @@
 // import { useState } from 'react'
 import styles from './App.module.css'
 
+import { Outlet } from "react-router-dom";
+
 import { NavBar } from "./components/NavBar";
-import { Player } from "./pages/music/PlayerApp";
-import { tracks } from "./assets/audio/audio";
 import { Footer } from "./components/Footer";
 
 type Props = {
@@ -15,7 +15,7 @@ export const AppTemplate: React.FC<Props> = ({ children }) => {
         <div className={styles.wrapper}>
           <NavBar />
           {children}
-          {/* <Player trackList={tracks} /> */}
+          <Outlet />
           <Footer />
         </div>
   )

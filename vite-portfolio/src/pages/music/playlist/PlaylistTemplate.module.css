@@ -1,10 +1,19 @@
 .wrapper {
-    margin: 20px auto;
+    /* margin: 20px auto;
     max-height: 425px;
     min-height: 120px;
     overflow-x: hidden;
+    padding-right: 10px; */
+    /* font-family: "Quicksand", sans-serif; */
+
+    width: 90%;
+    margin: 20px auto 90px;
+    max-height: 425px;
+    overflow-x: hidden;
     padding-right: 10px;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand",sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #1f212b var(--backgroundDark);
 }
 
 .wrapper::-webkit-scrollbar {
@@ -16,6 +25,6 @@
 }
 
 .wrapper::-webkit-scrollbar-thumb {
-    background: var(--primaryText);
+    background: var(--navActiveUnderlineColor);
     border-radius: 10px;
 }

@@ -1,5 +1,7 @@
 import styles from "./NavBar.module.css"
 
+import { NavLink } from "react-router-dom";
+
 export function NavBar() {
     //TODO: update with better type
     const navLinkClickHandler = ({ currentTarget }: any) => {
@@ -23,9 +25,12 @@ export function NavBar() {
             </div>
             <div className={styles.nav}>
             {/* className={`${styles.navLink} ${status === "active" ? styles.active : ""}`} */}
-                <a className={styles.navLink} href="#projects">projects</a>
+                {/* <a className={styles.navLink} href="#projects">projects</a>
                 <a className={styles.navLink} onClick={navLinkClickHandler} href="#music">music</a>
-                <a className={styles.navLink} href="#contact">contact</a>
+                <a className={styles.navLink} href="#contact">contact</a> */}
+                <NavLink to="projects" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>projects</NavLink>
+                <NavLink to="music" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>music</NavLink>
+                <NavLink to="contact" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>contact</NavLink>
             </div>
             <div className={styles.hamburger}></div>
         </div>

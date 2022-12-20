@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { AppTemplate } from './App'
+import { Player } from "./pages/music/PlayerApp";
+import { tracks } from "./assets/audio/audio";
 import { ErrorPage } from './pages/error/ErrorPage'
 import {
   createBrowserRouter,
@@ -13,19 +15,21 @@ const router = createBrowserRouter([
     path: "/",
     element: <AppTemplate />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "projects",
-    element: <AppTemplate />,
-  },
-  {
-    path: "music",
-    element: <AppTemplate />,
-  },
-  {
-    path: "contact",
-    element: <AppTemplate />,
-  },
+    children: [
+      {
+        path: "projects",
+        // element: <AppTemplate />,
+      },
+      {
+        path: "music",
+        element: <Player trackList={tracks} />,
+      },
+      {
+        path: "contact",
+        // element: <AppTemplate />,
+      },
+    ],
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
