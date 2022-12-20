@@ -6,7 +6,7 @@ import spotifyLogo from '../assets/icons/footer/spotify-icon.svg'
 export function Footer() {
 
     return (
-        <div className={styles.footerWrapper}>
+        <>
             <div className={styles.wrapper}>
                 <a href="https://github.com/alexgeis" target="_blank">
                     <div className={styles.iconWrapper}>
@@ -24,6 +24,6 @@ export function Footer() {
                     </div>
                 </a>
             </div>
-        </div>
+        </>
     )
 }
