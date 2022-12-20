@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-import { AppTemplate } from "../../App";
 // tags
 import { TagsTemplate } from "./tags/TagsTemplate";
 import { TagItem } from "./tags/TagItem";
@@ -225,7 +224,7 @@ export const Player = ({ trackList }: TrackList) => {
 	};
 
 	return (
-		<AppTemplate>
+		<>
 			<TagsTemplate>
 				{tags.map((tag, index) => {
 					return (
@@ -310,6 +309,6 @@ export const Player = ({ trackList }: TrackList) => {
 						}
 					})}
 			</PlaylistTemplate>
-		</AppTemplate>
+		</>
 	);
 };
