@@ -11,9 +11,9 @@ export function NavBar() {
             </div>
             <div className={styles.nav}>
                 <ul>
-                    <li><a href="#projects"></a></li>
-                    <li><a href="#music"></a></li>
-                    <li><a href="#contact"></a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#music">music</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </div>
             <div className={styles.hamburger}></div>
