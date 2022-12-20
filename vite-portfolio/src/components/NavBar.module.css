@@ -40,6 +40,9 @@
     margin: 0 20px;
     /* font-family: Poppins,sans-serif; */
 }
+.active {
+    border-bottom: 3px solid var(--navActiveUnderlineColor);
+}
 
 .hamburger {
     display: flex;
