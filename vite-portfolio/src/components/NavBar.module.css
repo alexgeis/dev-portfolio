@@ -58,7 +58,20 @@
 .hamburger {
     display: flex;
     align-items: center;
-    z-index: 1002;
+    margin: 0 20px;
+}
+
+.hamburgerBox {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1003;
+}
+.hamburgerBox div { 
+    width: 35px;
+    height: 5px;
+    background-color: var(--whiteColor);
+    margin: 6px 0;
+    transition: .4s;
 }
 
 @media only screen and (min-width: 600px){

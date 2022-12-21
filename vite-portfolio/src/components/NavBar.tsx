@@ -32,7 +32,13 @@ export function NavBar() {
                 <NavLink to="music" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>music</NavLink>
                 <NavLink to="contact" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>contact</NavLink>
             </div>
-            <div className={styles.hamburger}></div>
+            <div className={styles.hamburger}>
+                <div className={styles.hamburgerBox}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
     )
 }
