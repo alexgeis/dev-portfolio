@@ -76,6 +76,9 @@
 }
 
 .hamburgerMenu {
+    display: none;
+}
+.hamburgerMenuActive {
     position: absolute;
     display: grid;
     place-items: center;
@@ -119,7 +122,7 @@
         align-items: center;
         /* display: none; */
     }
-    .hamburger {
+    .hamburgerWrapper {
         display: none;
         /* display: flex;
         align-items: center;

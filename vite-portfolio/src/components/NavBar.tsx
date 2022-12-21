@@ -19,11 +19,12 @@ export function NavBar() {
         // }
     };
 
-    const hamburgerMenuClickHandler = () => {
+    const hamburgerMenuToggle = () => {
         setHamOpen(!hamOpen)
-
-
     }
+    const closeMenu = () => {
+        setHamOpen(false)
+      }
 
     return (
         <div className={styles.wrapper}>
@@ -38,15 +39,24 @@ export function NavBar() {
                 <NavLink to="contact" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>contact</NavLink>
             </div>
             <div className={styles.hamburgerWrapper}>
-                <div className={styles.hamburgerBox} onClick={hamburgerMenuClickHandler}>
+                <div className={styles.hamburgerBox} onClick={hamburgerMenuToggle}>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <div className={styles.hamburgerMenu}>
-                    <NavLink to="projects" className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink}>projects</NavLink>
-                    <NavLink to="music" className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink}>music</NavLink>
-                    <NavLink to="contact" className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink}>contact</NavLink>
+                <div className={`${styles.hamburgerMenu} ${hamOpen ? styles.hamburgerMenuActive : ""}`}>
+                    <NavLink 
+                        to="projects" 
+                        className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink} 
+                        onClick={() => closeMenu()}>projects</NavLink>
+                    <NavLink 
+                        to="music" 
+                        className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink} 
+                        onClick={() => closeMenu()}>music</NavLink>
+                    <NavLink 
+                        to="contact" 
+                        className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink} 
+                        onClick={() => closeMenu()}>contact</NavLink>
                 </div>
             </div>
         </div>
