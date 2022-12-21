@@ -19,9 +19,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/alexgeis/dev-portfolio">
+  <!-- <a href="https://github.com/alexgeis/dev-portfolio">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">Developer Portfolio</h3>
 
