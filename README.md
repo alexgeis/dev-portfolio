@@ -175,21 +175,21 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] NavBar
+- [x] NavBar
 - [ ] Home Page
-  - [ ] Hero
+  - [x] Hero
   - [ ] Projects
   - [ ] Music?
   - [ ] Contact
-- [ ] Footer
+- [x] Footer
 - [ ] Project Page
   - [ ] Projects
 - [ ] Music Page
   - [ ] Albums
-  - [ ] tags
-  - [ ] search
-  - [ ] player
-  - [ ] playlist
+  - [x] tags
+  - [x] search
+  - [x] player
+  - [x] playlist
 - [ ] Contact Page
   - [ ] Form
   - [ ] img
