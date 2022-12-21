@@ -2,6 +2,7 @@
     height: calc(100vh - 200px);
     display: grid;
     place-items: center;
+    margin: 20px auto 180px;
 }
 .heroWrapper {
     display: grid;
