@@ -25,6 +25,7 @@ img {
     display: block;
     width: 100%;
     height: auto;
+    opacity: 1;
     /* transition: opacity .5s linear; */
 }
 .heroIcon {
@@ -36,15 +37,14 @@ img {
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: opacity .5s ease;
+    transition: opacity .4s ease;
     background-color: var(--whiteColor);
 }
 
 .heroImg:hover {
     opacity: 0;
 }
-.heroImg:hover .heroIcon{
+.heroIcon:hover{
     opacity: 1;
 }
 
