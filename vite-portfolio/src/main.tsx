@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import { HomePage } from './pages/home/HomePage';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     element: <AppTemplate />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
       {
         path: "projects",
         // element: <AppTemplate />,
