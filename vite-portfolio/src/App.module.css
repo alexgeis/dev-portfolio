@@ -6,3 +6,7 @@
   min-height: 100vh;
   border: 1px solid var(--blackColor);
 }
+
+.spacer {
+  margin: 200px 0px;
+}

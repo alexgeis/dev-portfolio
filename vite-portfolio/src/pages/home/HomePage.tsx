@@ -5,6 +5,9 @@ import { HeroTemplate } from "./hero/HeroTemplate";
 import { HeroText } from "./hero/HeroText";
 import { HeroImg } from "./hero/HeroImg";
 
+// section title
+import { SectionTitle } from "./SectionTitle";
+
 // projects
 // import { ProjectTemplate } from "./projects/ProjectTemplate"
 // import { ProjectItem } from "./projects/ProjectItem"
@@ -37,6 +40,7 @@ export const HomePage = () => {
 				<HeroText/>
 				<HeroImg/>
 			</HeroTemplate>
+			<SectionTitle title="Featured Projects" />
 			{/* <TagsTemplate>
 				{tags.map((tag, index) => {
 					return (

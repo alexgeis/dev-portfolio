@@ -16,6 +16,7 @@ export const AppTemplate: React.FC<Props> = ({ children }) => {
           <NavBar />
           {children}
           <Outlet />
+          <div className={styles.spacer}></div>
           <Footer />
         </div>
   )

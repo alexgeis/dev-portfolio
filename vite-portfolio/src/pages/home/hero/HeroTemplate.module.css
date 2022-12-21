@@ -2,7 +2,7 @@
     height: calc(100vh - 200px);
     display: grid;
     place-items: center;
-    margin: 20px auto 210px;
+    
 }
 .heroWrapper {
     display: grid;
@@ -14,5 +14,12 @@
 @media only screen and (max-width: 900px) {
     .heroWrapper {
         grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 442px) {
+    .landingAreaWrapper {
+        height: auto;
+        min-height: 100%;
+        margin-bottom: 40px;
     }
 }
