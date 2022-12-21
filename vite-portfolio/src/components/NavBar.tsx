@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import styles from "./NavBar.module.css"
 
 import { NavLink } from "react-router-dom";
 
 export function NavBar() {
+    const [hamOpen, setHamOpen] = useState(false);
+
     //TODO: update with better type
     const navLinkClickHandler = ({ currentTarget }: any) => {
 
@@ -16,6 +19,12 @@ export function NavBar() {
         // }
     };
 
+    const hamburgerMenuClickHandler = () => {
+        setHamOpen(!hamOpen)
+
+
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.logoWrapper}>
@@ -24,35 +33,22 @@ export function NavBar() {
                 </a>
             </div>
             <div className={styles.nav}>
-            {/* className={`${styles.navLink} ${status === "active" ? styles.active : ""}`} */}
-                {/* <a className={styles.navLink} href="#projects">projects</a>
-                <a className={styles.navLink} onClick={navLinkClickHandler} href="#music">music</a>
-                <a className={styles.navLink} href="#contact">contact</a> */}
                 <NavLink to="projects" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>projects</NavLink>
                 <NavLink to="music" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>music</NavLink>
                 <NavLink to="contact" className={({ isActive }) => isActive ? styles.navLinkActive : styles.navLink}>contact</NavLink>
             </div>
-            <div className={styles.hamburger}>
-                <div className={styles.hamburgerBox}>
+            <div className={styles.hamburgerWrapper}>
+                <div className={styles.hamburgerBox} onClick={hamburgerMenuClickHandler}>
                     <div></div>
                     <div></div>
                     <div></div>
+                </div>
+                <div className={styles.hamburgerMenu}>
+                    <NavLink to="projects" className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink}>projects</NavLink>
+                    <NavLink to="music" className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink}>music</NavLink>
+                    <NavLink to="contact" className={({ isActive }) => isActive ? styles.hamburgerLinkActive : styles.hamburgerLink}>contact</NavLink>
                 </div>
             </div>
         </div>
     )
 }
-
-
-            // {tags.map((tag, index) => {
-            //     return (
-            //         <TagItem
-            //             key={index}
-            //             status={
-            //                 filter.length !== 0 && filter.includes(tag) ? "active" : ""
-            //             }
-            //             tag={tag}
-            //             onClick={tagClickHandler}
-            //         />
-            //     );
-            // })}

@@ -55,7 +55,8 @@
     border-bottom: 3px solid var(--navActiveUnderlineColor);
 }
 
-.hamburger {
+/* hamberder menu */
+.hamburgerWrapper {
     display: flex;
     align-items: center;
     margin: 0 20px;
@@ -73,6 +74,44 @@
     margin: 6px 0;
     transition: .4s;
 }
+
+.hamburgerMenu {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20vh 20px;
+    background-color: var(--backgroundDark);
+    text-align: center;
+    z-index: 1000!important;
+}
+
+.hamburgerLink {
+    opacity: 1;
+    display: block;
+    font-size: 30px;
+    font-family: Poppins,sans-serif;
+    color: var(--whiteColor);
+}
+.hamburgerLinkActive {
+    opacity: 1;
+    display: block;
+    font-size: 30px;
+    font-family: Poppins,sans-serif;
+    color: (var(--navActiveUnderlineColor))
+}
+/* .hamburgerBox:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px,6px);
+}
+.hamburgerBox:nth-child(2) {
+    opacity: 0;
+}
+.hamburgerBox:nth-child(3) {
+    transform: rotate(45deg) translate(-8px,-8px);
+} */
 
 @media only screen and (min-width: 600px){
     .nav {
