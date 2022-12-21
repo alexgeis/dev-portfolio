@@ -1,14 +1,12 @@
 .wrapper {
     display: none;
     place-items: center;
-}
+    position: relative;
 
-.heroImg {
-    width: 100%;
-    height: 400px;
+    height: 390px;
     width: auto;
-    border-radius: 50%;
     margin-left: 100px; 
+    border-radius: 50%;
     border: 10px solid #3e32e4;
     outline: 15px solid #18191f;
 }
@@ -16,6 +14,38 @@
 img {
     max-width: 100%;
     height: auto;
+}
+
+.heroImg,
+.heroIcon {
+    border-radius: 50%;
+    width: 100%;
+}
+.heroImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* transition: opacity .5s linear; */
+}
+.heroIcon {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: var(--whiteColor);
+}
+
+.heroImg:hover {
+    opacity: 0;
+}
+.heroImg:hover .heroIcon{
+    opacity: 1;
 }
 
 @media only screen and (min-width: 900px){

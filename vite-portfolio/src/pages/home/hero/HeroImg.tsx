@@ -6,7 +6,8 @@ export const HeroImg = () => {
 
     return (
         <div className={styles.wrapper}>
-            <img src={geisPhoto} alt="alex geis icon image" className={styles.heroImg}/>
+            <img src={geisPhoto} alt="alex geis photo image" className={styles.heroImg}/>
+            <img src={geisIcon} alt="alex geis icon image" className={styles.heroIcon}/>
         </div>
     )
 }

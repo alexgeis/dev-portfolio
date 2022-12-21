@@ -37,3 +37,53 @@
 .infoWrapper {
     padding: 20px;
 }
+.infoWrapper h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.listWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    gap: 20px;
+}
+.listWrapper p {
+    margin-bottom: 5px;
+    /* font-family: Poppins,sans-serif; */
+    color: var(--whiteColor);
+}
+
+.btnWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-gap: 50px;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.projectCardSrcBtn {
+    border: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #19192a;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 5px;
+    transition: transform .3s;
+    font-family: Varela Round,sans-serif;
+}
+
+.projectCardLiveBtn {
+    border: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    background-color: var(--purple);
+    color: #fff;
+    font-size: 22px;
+    border-radius: 5px;
+    transition: transform .3s;
+    font-family: Varela Round,sans-serif;
+}

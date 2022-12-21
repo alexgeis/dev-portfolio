@@ -9,10 +9,11 @@ import { HeroImg } from "./hero/HeroImg";
 import { SectionTitle } from "./SectionTitle";
 
 // projects
-// import { ProjectTemplate } from "./projects/ProjectTemplate"
+import { ProjectTemplate } from "./projects/ProjectTemplate"
 // import { ProjectItem } from "./projects/ProjectItem"
-// import { ProjectCard } from "./projects/ProjectCard"
-// import { ProjectCardItem } from "./projects/ProjectCardItem"
+import { ProjectCard } from "./projects/ProjectCard"
+import { ProjectCardItem } from "./projects/ProjectCardItem"
+import { projectData } from "./projects/projectData";
 
 // contact
 // import { ContactTemplate } from "./contact/ContactTemplate"
@@ -41,6 +42,20 @@ export const HomePage = () => {
 				<HeroImg/>
 			</HeroTemplate>
 			<SectionTitle title="Featured Projects" />
+			<ProjectTemplate>
+				{projectData.map((project, index) => {
+					return (
+						<ProjectCard 
+						key={index}
+						imgSrc={project.imgSrc}
+						title={project.title}
+						descArr={project.descArr}
+						gitSrc={project.gitSrc}
+						deployLink={project.deployLink}
+						/>
+					)
+				})}
+			</ProjectTemplate>
 			{/* <TagsTemplate>
 				{tags.map((tag, index) => {
 					return (
