@@ -1,0 +1,39 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    gap: 100px;
+    border-radius: 5px;
+}
+
+.imageWrapper {
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.cardImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    /* position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%; */
+}
+
+.infoWrapper {
+    padding: 20px;
+}
