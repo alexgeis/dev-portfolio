@@ -6,7 +6,8 @@ import { HeroText } from "./hero/HeroText";
 import { HeroImg } from "./hero/HeroImg";
 
 // section title
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "./sectionItems/SectionTitle";
+import { SectionBtn } from "./sectionItems/SectionBtn";
 
 // projects
 import { ProjectTemplate } from "./projects/ProjectTemplate"
@@ -41,6 +42,7 @@ export const HomePage = () => {
 				<HeroText/>
 				<HeroImg/>
 			</HeroTemplate>
+			
 			<SectionTitle title="Featured Projects" />
 			<ProjectTemplate>
 				{projectData.map((project, index) => {
@@ -56,90 +58,9 @@ export const HomePage = () => {
 					)
 				})}
 			</ProjectTemplate>
-			{/* <TagsTemplate>
-				{tags.map((tag, index) => {
-					return (
-						<TagItem
-							key={index}
-							status={
-								filter.length !== 0 && filter.includes(tag) ? "active" : ""
-							}
-							tag={tag}
-							onClick={tagClickHandler}
-						/>
-					);
-				})}
-			</TagsTemplate>
-			<Search
-				value={query}
-				onChange={(e: any) => updateQuery(e.target.value.toLowerCase())}
-				placeholder={`Search ${trackList.length} tracks...`}
-			/>
-			<PlayerTemplate>
-				<TrackInfoAndTimeBox>
-					<TrackInfo title={title} artist={artist} album={album} />
-					<Time
-						time={`${!time ? "0:00" : fmtMSS(time)}/${
-							!length ? "0:00" : fmtMSS(length)
-						}`}
-					/>
-				</TrackInfoAndTimeBox>
-				<Progress
-					value={slider}
-					onChange={(e: any) => {
-						setSlider(e.target.value);
-						setDrag(e.target.value);
-					}}
-					onMouseUp={play}
-					onTouchEnd={play}
-				/>
-				<ButtonsAndVolumeBox>
-					<ButtonsBox>
-						<Loop src={looped ? loopCurrentBtn : loopNoneBtn} onClick={loop} />
-						<Previous src={previousBtn} onClick={previous} />
-						{isPlaying ? (
-							<Pause src={pauseBtn} onClick={pause} />
-						) : (
-							<Play src={playBtn} onClick={play} />
-						)}
-						<Next src={nextBtn} onClick={next} />
-						<Shuffle
-							src={shuffled ? shuffleAllBtn : shuffleNoneBtn}
-							onClick={shuffle}
-						/>
-					</ButtonsBox>
-					<Volume
-						value={volume}
-						onChange={(e: any) => {
-							setVolume(e.target.value / 100);
-						}}
-					/>
-				</ButtonsAndVolumeBox>
-			</PlayerTemplate>
-			<PlaylistTemplate>
-				{trackList
-					.sort((a, b) => (a.title > b.title ? 1 : -1))
-					.map((el, index) => {
-						if (
-							filter.length === 0 ||
-							filter.some((filter) => el.tags.includes(filter))
-						) {
-							if (el.title.toLowerCase().includes(query.toLowerCase())) {
-								playlist.push(index);
-								return (
-									<PlaylistItem
-										status={curTrack === index ? "active" : ""}
-										key={index}
-										data_key={index}
-										title={el.title}
-										src={el.url}
-										onClick={playlistItemClickHandler}
-									/>
-								);
-							}
-						}
-					})}
-			</PlaylistTemplate> */}
+			<SectionBtn title="View All Projects" to="projects"/>
+
+
 		</>
 	);
 };

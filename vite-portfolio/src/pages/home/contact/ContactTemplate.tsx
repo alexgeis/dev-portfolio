@@ -1,9 +1,10 @@
 import styles from "./ContactTemplate.module.css";
 
-type Props = {
-	children?: React.ReactNode
-};
 
-export const ContactTemplate: React.FC<Props> = ({ children }) => {
-	return <div className={styles.wrapper}>{children}</div>;
+export const ContactTemplate = () => {
+	return <div className={styles.wrapper}>
+				<h1 className={styles.contactTitle}>Have a project in mind?</h1>
+				<p className={styles.contactDesc}>I'm available to work!</p>
+				<p className={styles.contactBtn}>Contact Me</p>
+		   </div>;
 };
