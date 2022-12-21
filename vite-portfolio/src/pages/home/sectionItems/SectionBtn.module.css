@@ -6,7 +6,7 @@
 
 .btn {
     padding: 10px 40px;
-    background-color: var(--purple);
+    background-color: var(--navActiveUnderlineColor);
     color: #fff;
     text-align: center;
     font-size: 22px;

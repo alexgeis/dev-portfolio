@@ -63,7 +63,7 @@
 }
 
 .projectCardSrcBtn {
-    border: none;
+    border: 1px solid var(--navActiveUnderlineColor);
     height: 50px;
     width: 100%;
     padding: 0 20px;
@@ -80,7 +80,7 @@
     height: 50px;
     width: 100%;
     padding: 0 20px;
-    background-color: var(--purple);
+    background-color: var(--navActiveUnderlineColor);
     color: #fff;
     font-size: 22px;
     border-radius: 5px;
