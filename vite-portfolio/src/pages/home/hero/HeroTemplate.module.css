@@ -10,3 +10,9 @@
     grid-gap: 30px;
     padding: 0 20px;
 }
+
+@media only screen and (max-width: 900px) {
+    .heroWrapper {
+        grid-template-columns: 1fr;
+    }
+}

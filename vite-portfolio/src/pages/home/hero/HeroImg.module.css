@@ -7,10 +7,10 @@
     width: 100%;
     height: 400px;
     width: auto;
+    border-radius: 50%;
+    margin-left: 100px; 
     border: 10px solid #3e32e4;
     outline: 15px solid #18191f;
-    border-radius: 50%;
-    margin-left: 100px;
 }
 
 img {
