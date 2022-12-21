@@ -40,9 +40,9 @@ export function NavBar() {
             </div>
             <div className={styles.hamburgerWrapper}>
                 <div className={styles.hamburgerBox} onClick={hamburgerMenuToggle}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className={`${hamOpen ? styles.hamburgerLineOne : ""}`}></div>
+                    <div className={`${hamOpen ? styles.hamburgerLineTwo : ""}`}></div>
+                    <div className={`${hamOpen ? styles.hamburgerLineThree : ""}`}></div>
                 </div>
                 <div className={`${styles.hamburgerMenu} ${hamOpen ? styles.hamburgerMenuActive : ""}`}>
                     <NavLink 

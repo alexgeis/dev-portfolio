@@ -106,15 +106,15 @@
     font-family: Poppins,sans-serif;
     color: (var(--navActiveUnderlineColor))
 }
-/* .hamburgerBox:nth-child(1) {
+.hamburgerLineOne {
     transform: rotate(-45deg) translate(-9px,6px);
 }
-.hamburgerBox:nth-child(2) {
+.hamburgerLineTwo {
     opacity: 0;
 }
-.hamburgerBox:nth-child(3) {
+.hamburgerLineThree {
     transform: rotate(45deg) translate(-8px,-8px);
-} */
+}
 
 @media only screen and (min-width: 600px){
     .nav {
