@@ -17,7 +17,7 @@ import { ProjectCardItem } from "./projects/ProjectCardItem"
 import { projectData } from "./projects/projectData";
 
 // contact
-// import { ContactTemplate } from "./contact/ContactTemplate"
+import { ContactTemplate } from "./contact/ContactTemplate"
 // import { ContactItem } from "./contact/ContactItem"
 // icons
 // import loopCurrentBtn from "../../assets/icons/player/loop_current.png";
@@ -42,7 +42,7 @@ export const HomePage = () => {
 				<HeroText/>
 				<HeroImg/>
 			</HeroTemplate>
-			
+
 			<SectionTitle title="Featured Projects" />
 			<ProjectTemplate>
 				{projectData.map((project, index) => {
@@ -60,7 +60,7 @@ export const HomePage = () => {
 			</ProjectTemplate>
 			<SectionBtn title="View All Projects" to="projects"/>
 
-
+			<ContactTemplate />
 		</>
 	);
 };
