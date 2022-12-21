@@ -1,5 +1,3 @@
-Search and replace keywords: `deployed_link`, `product-screenshot`, `dev-portfolio`, `Developer Portfolio`, `project_description`
-
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
@@ -33,7 +31,7 @@ Search and replace keywords: `deployed_link`, `product-screenshot`, `dev-portfol
     <a href="https://github.com/alexgeis/dev-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a class="deployed_link" href="https://github.com/alexgeis/dev-portfolio">View Demo</a>
+    <a class="deployed_link" href="https://geis.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/alexgeis/dev-portfolio/issues">Report Bug</a>
     ·
@@ -72,9 +70,9 @@ Search and replace keywords: `deployed_link`, `product-screenshot`, `dev-portfol
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-<a class="deployed_link" href="https://example.com">
+<a class="deployed_link" href="https://geis.netlify.app/">
 <p align="center">
-<img id="product-screenshot" src="images/screenshot.png" alt="Product Name Screen Shot"
+<img id="product-screenshot" src="./vite-portfolio/src/assets/img/screenshot.png" alt="Product Name Screen Shot"
 style="display: block;
     margin-left: auto;
     margin-right: auto;
@@ -276,4 +274,4 @@ Helpful resources and kudos.
 [license-url]: https://github.com/alexgeis/dev-portfolio/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alexngeis
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: /vite-portfolio/src/assets/img/screenshot.png
