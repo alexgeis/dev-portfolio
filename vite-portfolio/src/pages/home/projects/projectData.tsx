@@ -1,6 +1,6 @@
-import ProjectImage1 from "../../../assets/gifs/pokemon.gif"
-import ProjectImage2 from "../../../assets/img/screenshot.png"
-import ProjectImage3 from "../../../assets/img/screenshot.png"
+import pokemonProjectGif from "../../../assets/gifs/pokemon.gif"
+import musicPlayerProjectGif from "../../../assets/gifs/music-player.gif"
+import libraryProjectGif from "../../../assets/gifs/library.gif"
 
 type ProjectDataObjProps = {
     imgSrc: string;
@@ -12,24 +12,24 @@ type ProjectDataObjProps = {
 
 export const projectData: ProjectDataObjProps[] = [
     {
-        imgSrc: ProjectImage1,
+        imgSrc: pokemonProjectGif,
 	    title: "Pokémon Clone",
-	    descArr: ["Custom game map","Collision / map boundaries","Full movement","Sprite animation","Battle sequence w/ monsters","Random opponent attacks","Audio / sound FX","and other features..."],
+	    descArr: ["Move through custom game map","Collision / map boundaries","Sprite animation","Battle sequence w/ monsters","Audio / sound FX","and other features..."],
 	    gitSrc: "https://github.com/alexgeis/pokemon-game",
 	    deployLink: "https://mon-game.netlify.app/"
     },
     {
-        imgSrc: ProjectImage2,
-	    title: "Project 2",
-	    descArr: ["desc1","desc2","desc3","desc4","desc5","desc6","desc7","and other features..."],
-	    gitSrc: "https://github.com/alexgeis/",
-	    deployLink: "https://geis.netlify.app/"
+        imgSrc: musicPlayerProjectGif,
+	    title: "Browser Music Player",
+	    descArr: ["Genre tags","Search filtering","Time/volume controls","Loop + Shuffle","Playlist display","and other features..."],
+	    gitSrc: "https://github.com/alexgeis/music-player",
+	    deployLink: "https://music-player-ang.netlify.app/"
     },
     {
-        imgSrc: ProjectImage3,
-	    title: "Project 3",
-	    descArr: ["desc1","desc2","desc3","desc4","desc5","desc6","desc7","and other features..."],
-	    gitSrc: "https://github.com/alexgeis/",
-	    deployLink: "https://geis.netlify.app/"
+        imgSrc: libraryProjectGif,
+	    title: "Treat Your Shelf",
+	    descArr: ["Login/signup","Auth (node/express + bcrypt + SQL)","Add/delete books","Light/dark theme toggle","Read count progress bar","and other features..."],
+	    gitSrc: "https://github.com/alexgeis/library",
+	    deployLink: "https://github.com/alexgeis/library"
     }
 ]
