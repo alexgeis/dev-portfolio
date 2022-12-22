@@ -1,4 +1,5 @@
 import styles from "./HeroText.module.css"
+import { NavLink } from "react-router-dom";
 
 export const HeroText = () => {
 
@@ -16,8 +17,14 @@ export const HeroText = () => {
                 music as a hobby
             </div>
             <div className={styles.heroBtns}>
-                <p className={styles.heroProjectsBtn}>My Projects</p>
-                <p className={styles.heroContactBtn}>Get in Touch</p>
+                <NavLink 
+                    to="projects">
+                    <p className={styles.heroProjectsBtn}>My Projects</p>
+                </NavLink>
+                <NavLink 
+                    to="contact">
+                    <p className={styles.heroContactBtn}>Get in Touch</p>
+                </NavLink>
             </div>
         </div>
     )
