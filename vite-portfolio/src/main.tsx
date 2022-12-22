@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { AppTemplate } from './App'
 import { Player } from "./pages/music/PlayerApp";
 import { tracks } from "./assets/audio/audio";
+import { ContactPage } from './pages/contact/ContactPage';
 import { WorkInProgressPage } from './pages/WIP/WIP';
 import { ErrorPage } from './pages/error/ErrorPage'
 import {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <WorkInProgressPage />,
+        element: <ContactPage />,
       },
     ],
   }

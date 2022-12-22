@@ -5,5 +5,7 @@ type Props = {
 };
 
 export const ContactFormTemplate: React.FC<Props> = ({ children }) => {
-	return <div className={styles.wrapper}>{children}</div>;
+	return (
+		<div className={styles.wrapper}>{children}</div>
+	)
 };
