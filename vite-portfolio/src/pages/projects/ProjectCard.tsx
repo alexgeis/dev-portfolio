@@ -3,10 +3,11 @@ import styles from "./ProjectCard.module.css";
 type ProjectCardProps = {
 	imgSrc: string;
 	title: string;
+	desc: string;
 	deployLink: string;
 }   
 
-export const ProjectCard = ({ imgSrc, title, deployLink }: ProjectCardProps): JSX.Element => {
+export const ProjectCard = ({ imgSrc, title, desc, deployLink }: ProjectCardProps): JSX.Element => {
 	return (
 		<div
 			className={styles.wrapper}
@@ -23,6 +24,7 @@ export const ProjectCard = ({ imgSrc, title, deployLink }: ProjectCardProps): JS
 
 			<div className={styles.infoWrapper}>
 				<h1>{title}</h1>
+				<p>{desc}</p>
 				<div className={styles.btnWrapper}>
 					<a href={deployLink}>
 						<button className={styles.projectCardLiveBtn}>Live</button>
