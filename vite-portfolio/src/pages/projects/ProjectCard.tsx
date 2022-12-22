@@ -1,19 +1,34 @@
 import styles from "./ProjectCard.module.css";
 
 type ProjectCardProps = {
-	// status: string;
-	onClick?: React.MouseEventHandler;
-	// tag: any;
-    tbd: any;
+	imgSrc: string;
+	title: string;
+	deployLink: string;
 }   
 
-export const ProjectCard = ({ onClick, tbd }: ProjectCardProps): JSX.Element => {
+export const ProjectCard = ({ imgSrc, title, deployLink }: ProjectCardProps): JSX.Element => {
 	return (
 		<div
-			className={`${styles.projectCard} ${status === "active" ? styles.active : ""}`}
-			onClick={onClick}
+			className={styles.wrapper}
 		>
-			{tbd}
+			<div className={styles.imageWrapper}>
+				<a href={deployLink} target="_blank" rel="noopener noreferrer">
+					<span>
+						<img src={imgSrc} alt={`${title} Project Image`} 
+						className={styles.cardImage}
+						/>
+					</span>
+				</a>
+			</div>
+
+			<div className={styles.infoWrapper}>
+				<h1>{title}</h1>
+				<div className={styles.btnWrapper}>
+					<a href={deployLink}>
+						<button className={styles.projectCardLiveBtn}>Live</button>
+					</a>
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 
 // tags
-import { TagsTemplate } from "./tags/TagsTemplate";
-import { TagItem } from "./tags/TagItem";
+import { TagsTemplate } from "../../components/tags/TagsTemplate";
+import { TagItem } from "../../components/tags/TagItem";
 // search
-import { Search } from "./search/Search";
+import { Search } from "../../components/search/Search";
 // player
 import { PlayerTemplate } from "./player/PlayerTemplate";
 import { TrackInfoAndTimeBox } from "./player/TrackInfoAndTimeBox";

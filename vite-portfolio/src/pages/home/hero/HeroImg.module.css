@@ -2,8 +2,8 @@
     display: none;
     place-items: center;
     position: relative;
+    overflow: hidden;
 
-    height: 390px;
     width: auto;
     margin-left: 100px; 
     border-radius: 50%;
@@ -20,11 +20,13 @@ img {
 .heroIcon {
     border-radius: 50%;
     width: 100%;
+    background-color: var(--whiteColor);
 }
 .heroImg {
     display: block;
     width: 100%;
     opacity: 1;
+    height: 100%;
     /* transition: opacity .5s linear; */
 }
 .heroIcon {
@@ -37,7 +39,6 @@ img {
     height: 100%;
     width: 100%;
     transition: opacity .4s ease;
-    background-color: var(--whiteColor);
 }
 
 .heroImg:hover {
@@ -47,14 +48,19 @@ img {
     opacity: 1;
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 901px){
     .wrapper {
         display: grid;
     }
 }
 
+@media only screen and (max-width: 988px) {
+    .wrapper {
+        height: 380px;
+    }
+}
 @media only screen and (max-width: 1130px) {
-    .heroImg {
+    .wrapper {
         margin-left: 0;
     }
 }
