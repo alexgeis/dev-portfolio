@@ -65,8 +65,8 @@ type Props = {
 export const ContactPageTemplate: React.FC<Props> = ({ children }) => {
 	return (
     <div className={styles.wrapper}>
-        <h1 className="contactTitle">How can I help?</h1>
-        <p className="contactSubTitle">Reach out and I'll get back to you shortly</p>
+        <h1 className={styles.contactTitle}>How can I help?</h1>
+        <p className={styles.contactSubTitle}>Reach out and I'll get back to you shortly</p>
         {children}
     </div>
   )
