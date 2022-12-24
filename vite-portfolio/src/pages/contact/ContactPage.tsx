@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 // contact
-import { ContactFormTemplate } from "./ContactFormTemplate";
+import { ContactPageTemplate } from "./ContactPageTemplate";
 
 // section title
 import { SectionTitle } from "./sectionItems/SectionTitle";
@@ -36,9 +36,9 @@ export const ContactPage = () => {
 
 	return (
 		<>
-			<ContactFormTemplate>
+			<ContactPageTemplate>
                 <p>hi</p>
-            </ContactFormTemplate>
+            </ContactPageTemplate>
 		</>
 	);
 };
