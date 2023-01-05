@@ -1,10 +1,7 @@
 import styles from "./ContactForm.module.css";
 
 type ContactFormProps = {
-	// status: string;
 	onClick?: React.MouseEventHandler;
-	// tag: any;
-	tbd: any;
 };
 
 export const ContactForm = ({ onClick }: ContactFormProps): JSX.Element => {
