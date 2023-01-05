@@ -9,10 +9,12 @@ type ProjectDataObjProps = {
 	descArr: string[];
 	gitSrc: string;
 	deployLink: string;
+	orientation: string;
 };
 
 export const projectData: ProjectDataObjProps[] = [
 	{
+		orientation: "imgLeft",
 		imgSrc: pokemonProjectGif,
 		title: "Pokémon Clone",
 		descArr: [
@@ -27,6 +29,7 @@ export const projectData: ProjectDataObjProps[] = [
 		deployLink: "https://mon-game.netlify.app/",
 	},
 	{
+		orientation: "imgRight",
 		imgSrc: subTrackerProjectGif,
 		title: "Cache Bandit (Subscription Tracker)",
 		descArr: [
@@ -41,6 +44,7 @@ export const projectData: ProjectDataObjProps[] = [
 		deployLink: "https://subtracker.up.railway.app/",
 	},
 	{
+		orientation: "imgLeft",
 		imgSrc: musicPlayerProjectGif,
 		title: "Browser Music Player",
 		descArr: [
