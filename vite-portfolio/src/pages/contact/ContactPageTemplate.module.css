@@ -1,23 +1,56 @@
 .wrapper {
-    padding: 0 20px;
+	padding: 0 20px;
 }
 
 .contactTitle {
-    color: var(--whiteColor);
-    font-size: 50px;
-    /* font-family: Inter,sans-serif; */
-    text-align: center;
-    margin-bottom: 10px;
+	color: var(--whiteColor);
+	font-size: 50px;
+	/* font-family: Inter,sans-serif; */
+	text-align: center;
+	margin-bottom: 10px;
 }
 .contactSubTitle {
-    font-family: Varela Round,sans-serif;
-    font-size: 24px;
-    margin-bottom: 50px;
-    text-align: center;
+	/* font-family: Varela Round, sans-serif; */
+	font-size: 24px;
+	margin-bottom: 40px;
+	text-align: center;
+	position: relative;
+}
+#emailCopyButton {
+	border-radius: 15px;
+	width: 10px;
+	height: 10px;
+	margin-left: 1rem;
+	padding: 1rem;
+}
+.copyEmailMsg {
+	font-size: 0.6rem;
+	background-color: white;
+	color: black;
+	padding: 0.1rem 0.2rem;
+	width: 100px;
+	position: absolute;
+	top: -21px;
+	right: 0;
+	animation: fadeIn 1s;
+	transition: opacity 1s;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#copyEmailMsg.removed {
+	opacity: 0;
 }
 
 @media only screen and (max-width: 600px) {
-    .contactSubTitle {
-        margin-bottom: 10px;
-    }
+	.contactSubTitle {
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+	}
 }

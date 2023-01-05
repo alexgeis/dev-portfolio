@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styles from "./ContactPageTemplate.module.css";
 
 // function Form() {
@@ -57,17 +57,75 @@ import styles from "./ContactPageTemplate.module.css";
 
 // export default Form;
 
-
 type Props = {
-  children?: React.ReactNode
+	children?: React.ReactNode;
 };
 
 export const ContactPageTemplate: React.FC<Props> = ({ children }) => {
+	// const emailCopyBtnRef = useRef<HTMLButtonElement>(null);
+	// const emailCopyMsgRef = useRef<HTMLElement>(null);
+
+	// const handleEmailCopyBtnClick = () => {
+	// 	emailCopyBtnRef.current!.focus();
+	// };
+
+	function generateCopyMsg() {
+		const emailCopyBtn: HTMLElement | null =
+			document.getElementById("emailCopyButton");
+		const msgDiv = document.createElement("div");
+		msgDiv.classList.remove("removed");
+		msgDiv.setAttribute("id", "copyEmailMsg");
+		msgDiv.classList.add("copyEmailMsg");
+		msgDiv.textContent = "Email copied!";
+
+		emailCopyBtn!.textContent = "";
+		emailCopyBtn!.appendChild(msgDiv);
+
+		const timeoutAmt = 1000 * 2;
+		setTimeout(() => {
+			msgDiv.classList.add("removed");
+			msgDiv.addEventListener("transitionend", () =>
+				emailCopyBtn!.removeChild(msgDiv)
+			);
+			emailCopyBtn!.textContent = "COPY";
+		}, timeoutAmt);
+	}
+
+	function handleCopy() {
+		navigator.clipboard.writeText("siegxela@gmail.com").then(
+			function () {
+				// document.getElementById("heroEmail").select();
+				generateCopyMsg();
+				console.log("Async: Copying email to clipboard was successful!");
+			},
+			function (err) {
+				alert("Clipboard permissions don't allow copy");
+				console.error("Async: Could not copy text: ", err);
+			}
+		);
+	}
+
 	return (
-    <div className={styles.wrapper}>
-        <h1 className={styles.contactTitle}>How can I help?</h1>
-        <p className={styles.contactSubTitle}>Reach out and I'll get back to you shortly</p>
-        {children}
-    </div>
-  )
+		<div className={styles.wrapper}>
+			<h1 className={styles.contactTitle}>How can I help?</h1>
+			<h2 className={styles.contactSubTitle}>
+				Email:&nbsp;
+				<a href="mailto:siegxela@gmail.com">siegxela@gmail.com</a> &nbsp;
+				<button
+					className="btn"
+					id="emailCopyButton"
+					// id={styles.emailCopyButton}
+					onClick={handleCopy}
+					// ref={emailCopyBtnRef}
+				>
+					COPY
+				</button>
+			</h2>
+			<p className={styles.contactSubTitle}>
+				Reach out and I'll get back to you shortly
+			</p>
+
+			{children}
+		</div>
+	);
 };

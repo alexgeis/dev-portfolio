@@ -14,9 +14,10 @@ export const ContactForm = ({}: ContactFormProps): JSX.Element => {
 	const [form, setForm] = useState(INITIAL_STATE);
 
 	const handleChange = (event: any) => {
+		const { id, value } = event.target;
 		setForm({
 			...form,
-			[event.target.id]: event.target.value,
+			[id]: value,
 		});
 	};
 

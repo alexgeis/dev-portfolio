@@ -5,7 +5,7 @@ export const HeroText = () => {
 	return (
 		<div className={styles.wrapper}>
 			<h1>Hello!</h1>
-			<h1>aI'm Alex</h1>
+			<h1>I'm Alex</h1>
 			<div className={styles.aboutMe}>
 				I
 				<a href="https://github.com/alexgeis">
