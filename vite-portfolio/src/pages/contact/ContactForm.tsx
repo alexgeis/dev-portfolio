@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./ContactForm.module.css";
 
 type ContactFormProps = {
@@ -6,6 +6,8 @@ type ContactFormProps = {
 };
 
 export const ContactForm = ({}: ContactFormProps): JSX.Element => {
+	const formRef = useRef();
+
 	const INITIAL_STATE = {
 		name: "",
 		email: "",
