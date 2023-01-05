@@ -1,7 +1,7 @@
 import styles from "./ProjectPageTemplate.module.css";
 
 type Props = {
-	children?: React.ReactNode
+	children?: React.ReactNode;
 };
 
 export const ProjectPageTemplate: React.FC<Props> = ({ children }) => {
