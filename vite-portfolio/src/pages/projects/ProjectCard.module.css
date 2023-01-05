@@ -12,20 +12,14 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	box-sizing: border-box;
-}
-.imageWrapper span {
-	box-sizing: border-box;
-	display: inline-block;
-	overflow: hidden;
+	display: block;
 	width: initial;
 	height: initial;
 	background: none;
 	opacity: 1;
-	border: 0px;
-	margin: 0px;
-	padding: 0px;
-	position: relative;
+	border: 0;
+	margin: 0;
+	padding: 0;
 	max-width: 100%;
 }
 .cardImage {
@@ -37,6 +31,7 @@
 	transition: opacity 0.1s ease-in-out;
 	opacity: 1;
 	transition: all 0.2s ease-in-out;
+	height: 220px;
 }
 
 .infoWrapper {

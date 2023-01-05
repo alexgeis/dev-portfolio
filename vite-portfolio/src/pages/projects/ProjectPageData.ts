@@ -23,7 +23,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 	},
 	{
 		imgSrc: subTrackerProjectGif,
-		title: "Cache Bandit (Subscription Tracker)",
+		title: "Cache Bandit",
 		desc: "Manage and budget ongoing subscriptions",
 		techTags: ["JavaScript", "React", "Webpack", "MongoDB"],
 		gitSrc: "https://github.com/alexgeis/SubTracker",

@@ -25,7 +25,7 @@ export const ProjectCard = ({
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<span>
+					<span className={styles.imageSPANWrapper}>
 						<img
 							src={imgSrc}
 							alt={`${title} Project Image`}
