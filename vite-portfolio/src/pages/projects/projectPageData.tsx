@@ -1,7 +1,7 @@
-import pokemonProjectGif from "../../../assets/gifs/pokemon.gif";
-import musicPlayerProjectGif from "../../../assets/gifs/music-player.gif";
-import libraryProjectGif from "../../../assets/gifs/library.gif";
-import subTrackerProjectGif from "../../../assets/gifs/cache-bandit.gif";
+import pokemonProjectGif from "../../assets/gifs/pokemon.gif";
+import musicPlayerProjectGif from "../../assets/gifs/music-player.gif";
+import libraryProjectGif from "../../assets/gifs/library.gif";
+import subTrackerProjectGif from "../../assets/gifs/cache-bandit.gif";
 
 type ProjectPageDataObjProps = {
 	imgSrc: string;
