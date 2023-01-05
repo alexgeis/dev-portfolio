@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "./ContactForm.module.css";
 
 type ContactFormProps = {
@@ -6,7 +7,7 @@ type ContactFormProps = {
 };
 
 export const ContactForm = ({}: ContactFormProps): JSX.Element => {
-	const formRef = useRef();
+	const formRef = useRef<HTMLFormElement>(null);
 
 	const INITIAL_STATE = {
 		name: "",
@@ -16,25 +17,49 @@ export const ContactForm = ({}: ContactFormProps): JSX.Element => {
 	const [form, setForm] = useState(INITIAL_STATE);
 
 	const handleChange = (event: any) => {
-		const { id, value } = event.target;
+		const { name, value } = event.target;
 		setForm({
 			...form,
-			[id]: value,
+			[name]: value,
 		});
 	};
 
 	const handleSubmit = (event: any) => {
 		event.preventDefault();
+		// test
 		alert(
 			`${form.name}(email: ${form.email}) writes the following: ${form.msg}`
 		);
+		// validation
+		if (!form.name || !form.email || !form.msg) {
+			alert("Please ensure all fields contain content!");
+		}
+		// send to email via EmailJS
+		emailjs
+			.sendForm(
+				"service_4zrp0vu",
+				"template_zfyylxo",
+				formRef.current!,
+				"ZD7n5BJBesxO0h3x4"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.error(error.text);
+				}
+			);
 
 		setForm(INITIAL_STATE);
 	};
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
+			<form
+				ref={formRef}
+				onSubmit={handleSubmit}
+			>
 				<input
 					className={styles.contactFormInput}
 					type="text"
@@ -55,7 +80,7 @@ export const ContactForm = ({}: ContactFormProps): JSX.Element => {
 					className={styles.contactFormTextArea}
 					id="contactFormTextArea"
 					placeholder="Write your message"
-					name="message"
+					name="msg"
 					value={form.msg}
 					onChange={handleChange}
 				></textarea>
