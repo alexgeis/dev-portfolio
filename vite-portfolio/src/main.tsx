@@ -4,6 +4,8 @@ import { AppTemplate } from "./App";
 import { Player } from "./pages/music/PlayerApp";
 import { tracks } from "./assets/audio/audio";
 import { ContactPage } from "./pages/contact/ContactPage";
+import { ProjectPage } from "./pages/projects/ProjectPage";
+// utility pages
 import { WorkInProgressPage } from "./pages/WIP/WIP";
 import { ErrorPage } from "./pages/error/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "projects",
-				element: <WorkInProgressPage />,
+				element: <ProjectPage />,
 			},
 			{
 				path: "music",
