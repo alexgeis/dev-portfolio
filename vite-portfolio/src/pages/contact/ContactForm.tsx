@@ -1,30 +1,60 @@
+import { useState } from "react";
 import styles from "./ContactForm.module.css";
 
 type ContactFormProps = {
-	onClick?: React.MouseEventHandler;
+	// onClick?: React.MouseEventHandler;
 };
 
-export const ContactForm = ({ onClick }: ContactFormProps): JSX.Element => {
+export const ContactForm = ({}: ContactFormProps): JSX.Element => {
+	const INITIAL_STATE = {
+		name: "",
+		email: "",
+		msg: "",
+	};
+	const [form, setForm] = useState(INITIAL_STATE);
+
+	const handleChange = (event: any) => {
+		setForm({
+			...form,
+			[event.target.id]: event.target.value,
+		});
+	};
+
+	const handleSubmit = (event: any) => {
+		event.preventDefault();
+		alert(
+			`${form.name}(email: ${form.email}) writes the following: ${form.msg}`
+		);
+
+		setForm(INITIAL_STATE);
+	};
+
 	return (
 		<div>
-			<form action="">
+			<form onSubmit={handleSubmit}>
 				<input
 					className={styles.contactFormInput}
 					type="text"
 					placeholder="Your name"
 					name="name"
+					value={form.name}
+					onChange={handleChange}
 				/>
 				<input
 					className={styles.contactFormInput}
 					type="email"
 					placeholder="Your e-mail"
 					name="email"
+					value={form.email}
+					onChange={handleChange}
 				/>
 				<textarea
 					className={styles.contactFormTextArea}
 					id="contactFormTextArea"
 					placeholder="Write your message"
 					name="message"
+					value={form.msg}
+					onChange={handleChange}
 				></textarea>
 				<input
 					className={styles.contactFormSubmit}

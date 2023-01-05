@@ -21,11 +21,11 @@
 	padding: 10px 15px;
 	margin-bottom: 10px;
 	font-size: 18px;
-	font-family: Varela Round, sans-serif;
+	/* font-family: Varela Round, sans-serif; */
 	background-color: var(--grey);
 	background-color: var(--background);
 	color: var(--whiteColor);
-	border: 1px solid #343346;
+	border: 1px solid var(--lessDarkColor);
 }
 
 .contactFormSubmit {
