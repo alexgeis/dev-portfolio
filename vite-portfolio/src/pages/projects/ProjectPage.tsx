@@ -12,12 +12,20 @@ import { ProjectPageTemplate } from "./ProjectPageTemplate";
 import { ProjectCardTemplate } from "./ProjectCardTemplate";
 // import { ProjectItem } from "./ProjectItem"
 import { ProjectCard } from "./ProjectCard";
-import { ProjectCardItem } from "./ProjectCardItem";
-import { projectPageData } from "./projectPageData";
+import { projectPageData } from "./ProjectPageData";
 
 // const fmtMSS = (s) => new Date(1000 * s).toISOString().substr(15, 4);
 const fmtMSS = (s: number) =>
 	new Date(1000 * s).toISOString().substring(15, 19);
+
+type ProjectCardProps = {
+	imgSrc: string;
+	title: string;
+	desc: string;
+	techTags: string[];
+	gitSrc: string;
+	deployLink: string;
+};
 
 export const ProjectPage = () => {
 	const [query, updateQuery] = useState("");
@@ -33,7 +41,7 @@ export const ProjectPage = () => {
 				/>
 			</div> */}
 			<ProjectCardTemplate>
-				{projectPageData.map((project, index) => {
+				{projectPageData.map((project: ProjectCardProps, index: number) => {
 					return (
 						<ProjectCard
 							key={index}
