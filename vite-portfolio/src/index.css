@@ -103,8 +103,18 @@ body {
 	background-color: var(--backgroundDark);
 	/* color: var(--whiteColor); */
 	overflow-x: hidden;
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
-
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;
