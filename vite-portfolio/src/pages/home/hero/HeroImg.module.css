@@ -1,66 +1,66 @@
 .wrapper {
-    display: none;
-    place-items: center;
-    position: relative;
-    overflow: hidden;
+	display: none;
+	place-items: center;
+	position: relative;
+	overflow: hidden;
 
-    width: auto;
-    margin-left: 100px; 
-    border-radius: 50%;
-    border: 10px solid #3e32e4;
-    outline: 15px solid #18191f;
+	width: auto;
+	margin-left: 100px;
+	border-radius: 50%;
+	border: 10px solid var(--heroImgBorder);
+	outline: 15px solid var(--darkColor);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .heroImg,
 .heroIcon {
-    border-radius: 50%;
-    width: 100%;
-    background-color: var(--whiteColor);
+	border-radius: 50%;
+	width: 100%;
+	background-color: var(--whiteColor);
 }
 .heroImg {
-    display: block;
-    width: 100%;
-    opacity: 1;
-    height: 100%;
-    /* transition: opacity .5s linear; */
+	display: block;
+	width: 100%;
+	opacity: 1;
+	height: 100%;
+	/* transition: opacity .5s linear; */
 }
 .heroIcon {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    transition: opacity .4s ease;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	transition: opacity 0.4s ease;
 }
 
 .heroImg:hover {
-    opacity: 0;
+	opacity: 0;
 }
-.heroIcon:hover{
-    opacity: 1;
+.heroIcon:hover {
+	opacity: 1;
 }
 
-@media only screen and (min-width: 901px){
-    .wrapper {
-        display: grid;
-    }
+@media only screen and (min-width: 901px) {
+	.wrapper {
+		display: grid;
+	}
 }
 
 @media only screen and (max-width: 988px) {
-    .wrapper {
-        height: 380px;
-    }
+	.wrapper {
+		height: 380px;
+	}
 }
 @media only screen and (max-width: 1130px) {
-    .wrapper {
-        margin-left: 0;
-    }
+	.wrapper {
+		margin-left: 0;
+	}
 }
