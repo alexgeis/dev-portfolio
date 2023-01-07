@@ -4,6 +4,7 @@
 
 .title {
 	/* font-family: Inter,sans-serif; */
+	color: var(--whiteColor);
 	margin-bottom: 40px;
 	font-size: 40px;
 	padding: 0 20px 10px;
