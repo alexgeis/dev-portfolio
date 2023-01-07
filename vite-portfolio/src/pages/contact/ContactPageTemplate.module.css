@@ -25,8 +25,8 @@
 }
 .copyEmailMsg {
 	font-size: 0.6rem;
-	background-color: white;
-	color: black;
+	background-color: var(--whiteColor);
+	color: var(--darkColor);
 	padding: 0.1rem 0.2rem;
 	width: 100px;
 	position: absolute;
