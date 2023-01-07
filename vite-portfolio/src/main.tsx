@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { AppTemplate } from "./App";
-import { Player } from "./pages/music/PlayerApp";
+import { Player } from "./pages/music";
 import { tracks } from "./assets/audio/audio";
-import { ContactPage } from "./pages/contact/ContactPage";
-import { ProjectPage } from "./pages/projects/ProjectPage";
+// import { ContactPage } from "./pages/contact";
+import { ContactPage } from "./pages/contact";
+import { ProjectPage } from "./pages/projects";
 // utility pages
 import { WorkInProgressPage } from "./pages/WIP/WIP";
 import { ErrorPage } from "./pages/error/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import { HomePage } from "./pages/home/HomePage";
+import { HomePage } from "./pages/home";
 
 const router = createBrowserRouter([
 	{
