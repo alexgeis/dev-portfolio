@@ -1,25 +1,25 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 100px;
-    gap: 100px;
-    border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 100px;
+	gap: 100px;
+	border-radius: 5px;
 }
 
 .imageWrapper {
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	position: relative;
 }
 
 .cardImage {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 
-    /* position: absolute;
+	/* position: absolute;
     inset: 0px;
     box-sizing: border-box;
     padding: 0px;
@@ -35,67 +35,74 @@
 }
 
 .infoWrapper {
-    padding: 20px;
+	padding: 20px;
 }
 .infoWrapper h1 {
-    font-size: 34px;
-    margin-bottom: 20px;
+	font-size: 34px;
+	margin-bottom: 20px;
 }
 .listWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	gap: 20px;
 }
 .listWrapper p {
-    margin-bottom: 5px;
-    /* font-family: Poppins,sans-serif; */
-    color: var(--whiteColor);
+	margin-bottom: 5px;
+	/* font-family: Poppins,sans-serif; */
+	color: var(--whiteColor);
 }
 
 .btnWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    grid-gap: 50px;
-    gap: 50px;
-    margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	grid-gap: 50px;
+	gap: 50px;
+	margin-top: 20px;
 }
 
 .projectCardSrcBtn {
-    border: 1px solid var(--navActiveUnderlineColor);
-    height: 50px;
-    width: 100%;
-    padding: 0 20px;
-    background-color: #19192a;
-    color: #fff;
-    font-size: 22px;
-    border-radius: 5px;
-    transition: transform .3s;
-    font-family: Varela Round,sans-serif;
+	border: 1px solid var(--navActiveUnderlineColor);
+	height: 50px;
+	width: 100%;
+	padding: 0 20px;
+	background-color: #19192a;
+	color: #fff;
+	font-size: 22px;
+	border-radius: 5px;
+	transition: transform 0.3s;
+	font-family: Varela Round, sans-serif;
 }
 
 .projectCardLiveBtn {
-    border: none;
-    height: 50px;
-    width: 100%;
-    padding: 0 20px;
-    background-color: var(--navActiveUnderlineColor);
-    color: #fff;
-    font-size: 22px;
-    border-radius: 5px;
-    transition: transform .3s;
-    font-family: Varela Round,sans-serif;
+	border: none;
+	height: 50px;
+	width: 100%;
+	padding: 0 20px;
+	background-color: var(--navActiveUnderlineColor);
+	color: #fff;
+	font-size: 22px;
+	border-radius: 5px;
+	transition: transform 0.3s;
+	font-family: Varela Round, sans-serif;
 }
-
 
 @media only screen and (max-width: 600px) {
-    .wrapper {
-        gap: 50px;
-    }
+	.wrapper {
+		gap: 50px;
+		display: flex;
+		flex-direction: column;
+	}
+	.flipOrientationImg {
+		order: 1;
+	}
+	.flipOrientationInfo {
+		order: 2;
+	}
 }
 @media only screen and (max-width: 900px) {
-    .wrapper {
-        grid-template-columns: 1fr;
-    }
+	.wrapper {
+		grid-template-columns: 1fr;
+	}
 }

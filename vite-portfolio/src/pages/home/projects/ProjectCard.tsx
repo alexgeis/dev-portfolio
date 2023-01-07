@@ -56,7 +56,10 @@ export const ProjectCard = ({
 				</>
 			) : (
 				<>
-					<div className={styles.infoWrapper}>
+					<div
+						className={`${styles.infoWrapper} ${styles.flipOrientationInfo}`}
+						id="leftInfo"
+					>
 						<h1>{title}</h1>
 						<div className={styles.listWrapper}>
 							{descArr.map((desc, index) => {
@@ -73,7 +76,10 @@ export const ProjectCard = ({
 						</div>
 					</div>
 
-					<div className={styles.imageWrapper}>
+					<div
+						className={`${styles.imageWrapper} ${styles.flipOrientationImg}`}
+						id="rightImg"
+					>
 						<a
 							href={deployLink}
 							target="_blank"
