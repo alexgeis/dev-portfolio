@@ -63,11 +63,11 @@
 }
 
 .projectCardSrcBtn {
-	border: 1px solid var(--navActiveUnderlineColor);
+	border: 1px solid var(--projectSrcBtnBorder);
 	height: 50px;
 	width: 100%;
 	padding: 0 20px;
-	background-color: #19192a;
+	background-color: var(--);
 	color: #fff;
 	font-size: 22px;
 	border-radius: 5px;
@@ -80,12 +80,12 @@
 	height: 50px;
 	width: 100%;
 	padding: 0 20px;
-	background-color: var(--navActiveUnderlineColor);
-	color: #fff;
+	background-color: var(--projectLiveBtn);
+	color: var(--whiteColor);
 	font-size: 22px;
 	border-radius: 5px;
 	transition: transform 0.3s;
-	font-family: Varela Round, sans-serif;
+	/* font-family: Varela Round, sans-serif; */
 }
 
 @media only screen and (max-width: 600px) {

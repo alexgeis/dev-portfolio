@@ -40,7 +40,10 @@
 	--heroBtn: #1098f7;
 	--heroImgBorder: #1098f7;
 
-	--sectionBtn: #9b5de5;
+	--projectSrcBtnBorder: #f15bb5;
+	--projectLiveBtn: #f15bb5;
+
+	--sectionBtn: #f15bb5;
 
 	/* MUSIC PLAYER COLORS */
 	--tagsSlidersPurple: #9440f3;
