@@ -26,12 +26,12 @@
 	font-weight: 700;
 	font-size: 32px;
 
-	text-shadow: 0 0 var(--whiteColor), 0 1.2em var(--navActiveUnderlineColor);
+	text-shadow: 0 0 var(--whiteColor), 0 1.5em var(--navActiveUnderlineColor);
 	overflow: hidden;
 	transition: 0.4s;
 }
 .logo:hover {
-	text-shadow: 0 -1.2em var(--whiteColor), 0 0 (--navActiveUnderlineColor);
+	text-shadow: 0 -1.2em var(--whiteColor), 0 0 var(--navActiveUnderlineColor);
 }
 
 .nav {
@@ -42,12 +42,14 @@
 	color: var(--whiteColor);
 	padding: 10px 0;
 	margin: 0 20px;
+	font-size: 1.2rem;
 	/* font-family: Poppins,sans-serif; */
 }
 .navLinkActive {
 	color: var(--whiteColor);
 	padding: 7px 0;
 	margin: 0 20px;
+	font-size: 1.3rem;
 	border-bottom: 3px solid var(--navActiveUnderlineColor);
 }
 
@@ -92,14 +94,14 @@
 	opacity: 1;
 	display: block;
 	font-size: 30px;
-	font-family: Poppins, sans-serif;
+	/* font-family: Poppins, sans-serif; */
 	color: var(--whiteColor);
 }
 .hamburgerLinkActive {
 	opacity: 1;
 	display: block;
 	font-size: 30px;
-	font-family: Poppins, sans-serif;
+	/* font-family: Poppins, sans-serif; */
 	color: (var(--navActiveUnderlineColor));
 }
 .hamburgerLineOne {
