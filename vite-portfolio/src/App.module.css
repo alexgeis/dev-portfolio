@@ -5,8 +5,11 @@
 	position: relative;
 	min-height: 100vh;
 	/* border: 1px solid var(--blackColor); */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .spacer {
-	margin: 200px 0px;
+	margin: 100px 0px;
 }
