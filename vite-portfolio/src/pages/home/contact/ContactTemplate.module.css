@@ -13,17 +13,18 @@
 }
 
 .contactDesc {
-	font-family: Varela Round, sans-serif;
+	/* font-family: Varela Round, sans-serif; */
 	margin-bottom: 40px;
 	margin-top: 5px;
 	font-size: 24px;
-	color: #fff;
+	color: var(--whiteColor);
+	color: var(--whiteColor);
 }
 
 .contactBtn {
 	padding: 10px;
-	background-color: #04e76a;
-	color: #fff;
+	background-color: var(--contactBtn);
+	color: var(--whiteColor);
 	text-align: center;
 	font-size: 24px;
 	width: 70%;

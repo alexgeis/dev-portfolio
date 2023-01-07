@@ -27,7 +27,7 @@
 
 	--lightColor: #f9f9f9;
 	--darkColor: #191d32;
-	--lessDarkColor: #35363b;
+	--lessDarkColor: #282f44;
 
 	--navHighlightColor: #646cffaa;
 	--navActiveUnderlineColor: #9440f3;
@@ -44,6 +44,8 @@
 	--projectLiveBtn: #f15bb5;
 
 	--sectionBtn: #f15bb5;
+
+	--contactBtn: #1098f7;
 
 	/* MUSIC PLAYER COLORS */
 	--tagsSlidersPurple: #9440f3;
