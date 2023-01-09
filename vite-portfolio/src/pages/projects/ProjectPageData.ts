@@ -2,6 +2,7 @@ import pokemonProjectGif from "../../assets/gifs/pokemon.gif";
 import musicPlayerProjectGif from "../../assets/gifs/music-player.gif";
 import libraryProjectGif from "../../assets/gifs/library.gif";
 import subTrackerProjectGif from "../../assets/gifs/cache-bandit.gif";
+import todoAppGif from "../../assets/gifs/todo-app.gif";
 
 type ProjectPageDataObjProps = {
 	imgSrc: string;
@@ -36,6 +37,14 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		techTags: ["JavaScript", "React"],
 		gitSrc: "https://github.com/alexgeis/music-player",
 		deployLink: "https://music-player-ang.netlify.app/",
+	},
+	{
+		imgSrc: todoAppGif,
+		title: "To-do App",
+		desc: "Task tracking application",
+		techTags: ["JavaScript", "CSS"],
+		gitSrc: "https://github.com/alexgeis/todo-list",
+		deployLink: "alexgeis.github.io/todo-list/",
 	},
 	{
 		imgSrc: libraryProjectGif,
