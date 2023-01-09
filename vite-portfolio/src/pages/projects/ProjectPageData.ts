@@ -3,6 +3,9 @@ import musicPlayerProjectGif from "../../assets/gifs/music-player.gif";
 import libraryProjectGif from "../../assets/gifs/library.gif";
 import subTrackerProjectGif from "../../assets/gifs/cache-bandit.gif";
 import todoAppGif from "../../assets/gifs/todo-app.gif";
+import passGenGif from "../../assets/gifs/password-generator.gif";
+import weatherDashGif from "../../assets/gifs/weather-dashboard.gif";
+import etchSketchGif from "../../assets/gifs/etch-a-sketch.gif";
 
 type ProjectPageDataObjProps = {
 	imgSrc: string;
@@ -53,5 +56,29 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		techTags: ["JavaScript", "MySQL"],
 		gitSrc: "https://github.com/alexgeis/library",
 		deployLink: "https://github.com/alexgeis/library",
+	},
+	{
+		imgSrc: passGenGif,
+		title: "Password Generator",
+		desc: "Create a custom password",
+		techTags: ["JavaScript"],
+		gitSrc: "https://github.com/alexgeis/JS-Password-Generator",
+		deployLink: "alexgeis.github.io/JS-Password-Generator/",
+	},
+	{
+		imgSrc: weatherDashGif,
+		title: "API Weather Dashboard",
+		desc: "Display weather info from OpenWeatherAPI",
+		techTags: ["JavaScript", "API"],
+		gitSrc: "https://github.com/alexgeis/Weather-Dashboard",
+		deployLink: "alexgeis.github.io/Weather-Dashboard/",
+	},
+	{
+		imgSrc: etchSketchGif,
+		title: "Etch-a-Sketch",
+		desc: "Browser drawing tool",
+		techTags: ["JavaScript"],
+		gitSrc: "https://github.com/alexgeis/Etch-a-Sketch",
+		deployLink: "https://alexgeis.github.io/Etch-a-Sketch/",
 	},
 ];
