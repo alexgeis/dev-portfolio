@@ -20,7 +20,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 	{
 		imgSrc: pokemonProjectGif,
 		title: "Pokémon Clone",
-		desc: "project description in a few words",
+		desc: "Gotta catch 'em all (in the browser)",
 		techTags: ["JavaScript"],
 		gitSrc: "https://github.com/alexgeis/pokemon-game",
 		deployLink: "https://mon-game.netlify.app/",
@@ -35,8 +35,8 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 	},
 	{
 		imgSrc: musicPlayerProjectGif,
-		title: "Browser Music Player",
-		desc: "project description in a few words",
+		title: "Music Player",
+		desc: "Browser audio player",
 		techTags: ["JavaScript", "React"],
 		gitSrc: "https://github.com/alexgeis/music-player",
 		deployLink: "https://music-player-ang.netlify.app/",
@@ -52,7 +52,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 	{
 		imgSrc: libraryProjectGif,
 		title: "Treat Your Shelf",
-		desc: "project description in a few words",
+		desc: "Bookshelf storage app",
 		techTags: ["JavaScript", "MySQL"],
 		gitSrc: "https://github.com/alexgeis/library",
 		deployLink: "https://github.com/alexgeis/library",
