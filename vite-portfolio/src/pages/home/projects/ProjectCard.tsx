@@ -1,5 +1,6 @@
 import styles from "./ProjectCard.module.css";
 import ProjectImage from "../../../assets/img/screenshot.png";
+import checkMark from "../../../assets/icons/check-mark.png";
 
 type ProjectCardProps = {
 	imgSrc: string;
@@ -41,7 +42,12 @@ export const ProjectCard = ({
 						<h1>{title}</h1>
 						<div className={styles.listWrapper}>
 							{descArr.map((desc, index) => {
-								return <p key={index}>{desc}</p>;
+								return (
+									<p key={index}>
+										<span className={styles.checkmark}>&#10003;</span>&nbsp;
+										{desc}
+									</p>
+								);
 							})}
 						</div>
 						<div className={styles.btnWrapper}>
@@ -63,7 +69,12 @@ export const ProjectCard = ({
 						<h1>{title}</h1>
 						<div className={styles.listWrapper}>
 							{descArr.map((desc, index) => {
-								return <p key={index}>{desc}</p>;
+								return (
+									<p key={index}>
+										<span className={styles.checkmark}>&#10003;</span>&nbsp;
+										{desc}
+									</p>
+								);
 							})}
 						</div>
 						<div className={styles.btnWrapper}>

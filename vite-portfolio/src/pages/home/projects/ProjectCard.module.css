@@ -52,6 +52,9 @@
 	/* font-family: Poppins,sans-serif; */
 	color: var(--whiteColor);
 }
+.checkmark {
+	color: var(--checkmark);
+}
 
 .btnWrapper {
 	display: grid;
