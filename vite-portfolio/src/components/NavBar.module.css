@@ -31,7 +31,7 @@
 	transition: 0.4s;
 }
 .logo:hover {
-	text-shadow: 0 -1.2em var(--whiteColor), 0 0 var(--navActiveUnderlineColor);
+	text-shadow: 0 -1.5em var(--whiteColor), 0 0 var(--navActiveUnderlineColor);
 }
 
 .nav {
