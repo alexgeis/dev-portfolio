@@ -8,18 +8,31 @@ export const HeroText = () => {
 			<h1>I'm Alex</h1>
 			<div className={styles.aboutMe}>
 				I
-				<a href="https://github.com/alexgeis">
+				<a
+					href="https://github.com/alexgeis"
+					target="_blank"
+				>
 					<span> build </span>
 				</a>
-				web apps and
+				web apps,
 				{/* <span> write </span>
 				jokes,  */}
-				<a href="https://open.spotify.com/artist/41yri20ft220T9dx4A6mWa?si=-e-vKZuXSvqnzf3-7tIjDA">
-					<span> produce music </span>
+				<wbr></wbr>
+				<a
+					href="https://open.spotify.com/artist/41yri20ft220T9dx4A6mWa?si=-e-vKZuXSvqnzf3-7tIjDA"
+					target="_blank"
+				>
+					<span> produce music</span>
 				</a>
-				/
+				, &#38;
 				<span>
-					<a href="https://www.instagram.com/ghosthopofficial/"> DJ</a>
+					<a
+						href="https://www.instagram.com/ghosthopofficial/"
+						target="_blank"
+					>
+						{" "}
+						DJ w/ Ghosthop
+					</a>
 				</span>
 			</div>
 			<div className={styles.heroBtns}>
