@@ -28,6 +28,7 @@
 	--lightColor: #f9f9f9;
 	--darkColor: #191d32;
 	--lessDarkColor: #282f44;
+	--lighterDarkColor: #444444;
 
 	--navHighlightColor: #646cffaa;
 	--navActiveUnderlineColor: #1098f7;
@@ -38,6 +39,7 @@
 	/* HOME PAGE COLORS */
 	--heroTextHighlight: #1098f7;
 	--heroBtn: #1098f7;
+	--heroBtnLow: #0e7ecd;
 	--heroImgBorder: #1098f7;
 
 	--checkmark: #1098f7;

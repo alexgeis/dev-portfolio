@@ -6,6 +6,7 @@ import todoAppGif from "../../assets/gifs/todo-app.gif";
 import passGenGif from "../../assets/gifs/password-generator.gif";
 import weatherDashGif from "../../assets/gifs/weather-dashboard.gif";
 import etchSketchGif from "../../assets/gifs/etch-a-sketch.gif";
+import ghosthopProjectGif from "../../assets/gifs/ghosthop.gif";
 
 type ProjectPageDataObjProps = {
 	imgSrc: string;
@@ -40,6 +41,14 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		techTags: ["JavaScript", "React"],
 		gitSrc: "https://github.com/alexgeis/music-player",
 		deployLink: "https://music-player-ang.netlify.app/",
+	},
+	{
+		imgSrc: ghosthopProjectGif,
+		title: "Ghosthop Website",
+		desc: "Official artist page of DJs Ghosthop",
+		techTags: ["JavaScript", "CSS", "Next.js", "React"],
+		gitSrc: "https://github.com/alexgeis/ghosthop",
+		deployLink: "https://ghosthop.vercel.app/",
 	},
 	{
 		imgSrc: todoAppGif,

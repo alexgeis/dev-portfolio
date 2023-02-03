@@ -1,6 +1,7 @@
 import pokemonProjectGif from "../../../assets/gifs/pokemon.gif";
 import musicPlayerProjectGif from "../../../assets/gifs/music-player.gif";
 import subTrackerProjectGif from "../../../assets/gifs/cache-bandit.gif";
+import ghosthopProjectGif from "../../../assets/gifs/ghosthop.gif";
 // import libraryProjectGif from "../../../assets/gifs/library.gif";
 
 type ProjectDataObjProps = {
@@ -38,7 +39,7 @@ export const projectData: ProjectDataObjProps[] = [
 			"Add/edit/delete subcriptions",
 			"Light/dark theme toggle",
 			"PWA download",
-			"and other features...",
+			"and more...",
 		],
 		gitSrc: "https://github.com/alexgeis/SubTracker",
 		deployLink: "https://subtracker.up.railway.app/",
@@ -57,6 +58,21 @@ export const projectData: ProjectDataObjProps[] = [
 		],
 		gitSrc: "https://github.com/alexgeis/music-player",
 		deployLink: "https://music-player-ang.netlify.app/",
+	},
+	{
+		orientation: "imgRight",
+		imgSrc: ghosthopProjectGif,
+		title: "Ghosthop Website",
+		descArr: [
+			"Built with Next.js",
+			"Emailjs Integration",
+			"Spotify + Soundcloud embeds",
+			"Jest Testing",
+			"Fully Responsive",
+			"and more...",
+		],
+		gitSrc: "https://github.com/alexgeis/ghosthop",
+		deployLink: "https://ghosthop.vercel.app/",
 	},
 	// {
 	//     imgSrc: libraryProjectGif,
