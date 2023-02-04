@@ -155,3 +155,14 @@ button:focus-visible {
 		background-color: var(--lightColor);
 	}
 }
+
+.scroll-animation-hide {
+	opacity: 0;
+	transform: translateY(20%);
+	transition: all 2.5s;
+}
+
+.scroll-animation-show {
+	opacity: 1;
+	transform: translateY(0);
+}
