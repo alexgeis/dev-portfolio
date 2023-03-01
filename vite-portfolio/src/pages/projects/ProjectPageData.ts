@@ -90,4 +90,12 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		gitSrc: "https://github.com/alexgeis/Etch-a-Sketch",
 		deployLink: "https://alexgeis.github.io/Etch-a-Sketch/",
 	},
+	{
+		imgSrc: etchSketchGif, // TODO: replace w/ gif
+		title: "Python Tech News",
+		desc: "Tech blog for Python articles",
+		techTags: ["Python"],
+		gitSrc: "https://github.com/alexgeis/tech-news",
+		deployLink: "https://tech-news-production.up.railway.app/",
+	},
 ];
