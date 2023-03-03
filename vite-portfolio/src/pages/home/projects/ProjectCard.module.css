@@ -91,6 +91,10 @@
 	/* font-family: Varela Round, sans-serif; */
 }
 
+.projectCardLiveBtn:hover {
+	background-color: var(--projectLiveBtnHover);
+}
+
 @media only screen and (max-width: 600px) {
 	.wrapper {
 		gap: 50px;
