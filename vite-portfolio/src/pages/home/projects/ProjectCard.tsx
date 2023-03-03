@@ -102,6 +102,21 @@ export const ProjectCard = ({
 								<button className={styles.projectCardLiveBtn}>Live</button>
 							</a>
 						</div>
+						<div className={styles.techWrapper}>
+							<h3>Built with</h3>
+							<div className={styles.techListWrapper}>
+								{techTags.map((tech, index) => {
+									return (
+										<p
+											key={index}
+											className={styles.techListItem}
+										>
+											{tech}
+										</p>
+									);
+								})}
+							</div>
+						</div>
 					</div>
 
 					<div
