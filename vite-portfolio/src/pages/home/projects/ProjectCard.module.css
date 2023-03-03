@@ -96,18 +96,15 @@
 }
 
 .techWrapper {
-	/* wraps "built with" titles and techListWrapper grid */
 	margin-top: 20px;
 }
 .techListWrapper {
-	/* grid of tech used */
 	margin-top: 10px;
 	display: grid;
 	gap: 20px;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 .techListItem {
-	/* styling of individual tech items */
 	display: flex;
 	justify-content: center;
 	background-color: var(--techTagColor);
@@ -117,19 +114,20 @@
 
 @media only screen and (max-width: 600px) {
 	.wrapper {
-		gap: 50px;
+		gap: 40px;
 		display: flex;
 		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.wrapper {
+		gap: 10px;
+		grid-template-columns: 1fr;
 	}
 	.flipOrientationImg {
 		order: 1;
 	}
 	.flipOrientationInfo {
 		order: 2;
-	}
-}
-@media only screen and (max-width: 900px) {
-	.wrapper {
-		grid-template-columns: 1fr;
 	}
 }
