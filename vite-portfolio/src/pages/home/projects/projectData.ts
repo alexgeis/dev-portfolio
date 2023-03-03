@@ -2,6 +2,7 @@ import pokemonProjectGif from "../../../assets/gifs/pokemon.gif";
 import musicPlayerProjectGif from "../../../assets/gifs/music-player.gif";
 import subTrackerProjectGif from "../../../assets/gifs/cache-bandit.gif";
 import ghosthopProjectGif from "../../../assets/gifs/ghosthop.gif";
+import pythonTechNewsGif from "../../../assets/gifs/python-tech-news.gif";
 // import libraryProjectGif from "../../../assets/gifs/library.gif";
 
 type ProjectDataObjProps = {
@@ -65,19 +66,19 @@ export const projectData: ProjectDataObjProps[] = [
 	},
 	{
 		orientation: "imgRight",
-		imgSrc: ghosthopProjectGif,
-		title: "Ghosthop Website",
+		imgSrc: pythonTechNewsGif,
+		title: "Python Tech News",
 		descArr: [
-			"Built with Next.js",
-			"Emailjs Integration",
-			"Spotify + Soundcloud embeds",
-			"Jest Testing",
-			"Fully Responsive",
+			"Built w/ Python",
+			"Responsive design",
+			"Jinja template rendering",
+			"Flask back-end",
+			"User auth w/ SQLAlchemy ORM",
 			"and more...",
 		],
 		gitSrc: "https://github.com/alexgeis/ghosthop",
 		deployLink: "https://ghosthop.vercel.app/",
-		techTags: ["JavaScript / React", "Next.js", "Jest"],
+		techTags: ["Python", "Flask", "SQLAlchemy", "Jinja"],
 	},
 	{
 		orientation: "imgLeft",
