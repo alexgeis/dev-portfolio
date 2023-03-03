@@ -10,7 +10,7 @@ type ProjectDataObjProps = {
 	descArr: string[];
 	gitSrc: string;
 	deployLink: string;
-	orientation: string;
+	orientation: "imgLeft" | "imgRight";
 	techTags: string[];
 };
 
@@ -65,6 +65,22 @@ export const projectData: ProjectDataObjProps[] = [
 	},
 	{
 		orientation: "imgRight",
+		imgSrc: ghosthopProjectGif,
+		title: "Ghosthop Website",
+		descArr: [
+			"Built with Next.js",
+			"Emailjs Integration",
+			"Spotify + Soundcloud embeds",
+			"Jest Testing",
+			"Fully Responsive",
+			"and more...",
+		],
+		gitSrc: "https://github.com/alexgeis/ghosthop",
+		deployLink: "https://ghosthop.vercel.app/",
+		techTags: ["JavaScript / React", "Next.js", "Jest"],
+	},
+	{
+		orientation: "imgLeft",
 		imgSrc: ghosthopProjectGif,
 		title: "Ghosthop Website",
 		descArr: [
