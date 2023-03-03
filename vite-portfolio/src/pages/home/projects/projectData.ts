@@ -11,6 +11,7 @@ type ProjectDataObjProps = {
 	gitSrc: string;
 	deployLink: string;
 	orientation: string;
+	techTags: string[];
 };
 
 export const projectData: ProjectDataObjProps[] = [
@@ -28,6 +29,7 @@ export const projectData: ProjectDataObjProps[] = [
 		],
 		gitSrc: "https://github.com/alexgeis/pokemon-game",
 		deployLink: "https://mon-game.netlify.app/",
+		techTags: ["JavaScript", "GSAP", "Tiled"],
 	},
 	{
 		orientation: "imgRight",
@@ -43,6 +45,7 @@ export const projectData: ProjectDataObjProps[] = [
 		],
 		gitSrc: "https://github.com/alexgeis/SubTracker",
 		deployLink: "https://subtracker.up.railway.app/",
+		techTags: ["JavaScript / React", "MongoDB", "Node / Express"],
 	},
 	{
 		orientation: "imgLeft",
@@ -58,6 +61,7 @@ export const projectData: ProjectDataObjProps[] = [
 		],
 		gitSrc: "https://github.com/alexgeis/music-player",
 		deployLink: "https://music-player-ang.netlify.app/",
+		techTags: ["JavaScript / React"],
 	},
 	{
 		orientation: "imgRight",
@@ -73,6 +77,7 @@ export const projectData: ProjectDataObjProps[] = [
 		],
 		gitSrc: "https://github.com/alexgeis/ghosthop",
 		deployLink: "https://ghosthop.vercel.app/",
+		techTags: ["JavaScript / React", "Next.js", "Jest"],
 	},
 	// {
 	//     imgSrc: libraryProjectGif,

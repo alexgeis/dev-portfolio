@@ -45,6 +45,7 @@ export const HomePage = () => {
 							descArr={project.descArr}
 							gitSrc={project.gitSrc}
 							deployLink={project.deployLink}
+							techTags={project.techTags}
 							orientation={project.orientation}
 						/>
 					);

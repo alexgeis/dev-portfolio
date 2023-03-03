@@ -8,6 +8,7 @@ type ProjectCardProps = {
 	descArr: string[];
 	gitSrc: string;
 	deployLink: string;
+	techTags: string[];
 	orientation: string;
 };
 
@@ -17,6 +18,7 @@ export const ProjectCard = ({
 	descArr,
 	gitSrc,
 	deployLink,
+	techTags,
 	orientation,
 }: ProjectCardProps): JSX.Element => {
 	return (
@@ -57,6 +59,21 @@ export const ProjectCard = ({
 							<a href={deployLink}>
 								<button className={styles.projectCardLiveBtn}>Live</button>
 							</a>
+						</div>
+						<div className={styles.techWrapper}>
+							<h3>Built with</h3>
+							<div className={styles.techListWrapper}>
+								{techTags.map((tech, index) => {
+									return (
+										<p
+											key={index}
+											className={styles.techListItem}
+										>
+											{tech}
+										</p>
+									);
+								})}
+							</div>
 						</div>
 					</div>{" "}
 				</>
