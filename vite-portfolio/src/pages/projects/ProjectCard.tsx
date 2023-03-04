@@ -4,7 +4,7 @@ type ProjectCardProps = {
 	imgSrc: string;
 	title: string;
 	desc: string;
-	techTags: string[];
+	techTags?: string[];
 	gitSrc: string;
 	deployLink: string;
 };
@@ -39,10 +39,16 @@ export const ProjectCard = ({
 				<h1>{title}</h1>
 				<p>{desc}</p>
 				<div className={styles.btnWrapper}>
-					<a href={gitSrc}>
+					<a
+						href={gitSrc}
+						target="_blank"
+					>
 						<button className={styles.projectCardSrcBtn}>Source</button>
 					</a>
-					<a href={deployLink}>
+					<a
+						href={deployLink}
+						target="_blank"
+					>
 						<button className={styles.projectCardLiveBtn}>Live</button>
 					</a>
 				</div>
