@@ -53,10 +53,16 @@ export const ProjectCard = ({
 							})}
 						</div>
 						<div className={styles.btnWrapper}>
-							<a href={gitSrc}>
+							<a
+								href={gitSrc}
+								target="_blank"
+							>
 								<button className={styles.projectCardSrcBtn}>Source</button>
 							</a>
-							<a href={deployLink}>
+							<a
+								href={deployLink}
+								target="_blank"
+							>
 								<button className={styles.projectCardLiveBtn}>Live</button>
 							</a>
 						</div>
@@ -95,10 +101,16 @@ export const ProjectCard = ({
 							})}
 						</div>
 						<div className={styles.btnWrapper}>
-							<a href={gitSrc}>
+							<a
+								href={gitSrc}
+								target="_blank"
+							>
 								<button className={styles.projectCardSrcBtn}>Source</button>
 							</a>
-							<a href={deployLink}>
+							<a
+								href={deployLink}
+								target="_blank"
+							>
 								<button className={styles.projectCardLiveBtn}>Live</button>
 							</a>
 						</div>
