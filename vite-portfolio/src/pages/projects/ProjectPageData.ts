@@ -65,7 +65,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		desc: "Task tracking application",
 		techTags: ["JavaScript", "CSS"],
 		gitSrc: "https://github.com/alexgeis/todo-list",
-		deployLink: "alexgeis.github.io/todo-list/",
+		deployLink: "https://alexgeis.github.io/todo-list/",
 	},
 	{
 		imgSrc: libraryProjectGif,
@@ -81,7 +81,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		desc: "Create a custom password",
 		techTags: ["JavaScript"],
 		gitSrc: "https://github.com/alexgeis/JS-Password-Generator",
-		deployLink: "alexgeis.github.io/JS-Password-Generator/",
+		deployLink: "https://alexgeis.github.io/JS-Password-Generator/",
 	},
 	{
 		imgSrc: weatherDashGif,
@@ -89,7 +89,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		desc: "Display weather info from OpenWeatherAPI",
 		techTags: ["JavaScript", "API"],
 		gitSrc: "https://github.com/alexgeis/Weather-Dashboard",
-		deployLink: "alexgeis.github.io/Weather-Dashboard/",
+		deployLink: "https://alexgeis.github.io/Weather-Dashboard/",
 	},
 	{
 		imgSrc: etchSketchGif,
