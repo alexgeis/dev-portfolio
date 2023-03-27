@@ -39,7 +39,7 @@ export const projectPageData: ProjectPageDataObjProps[] = [
 		imgSrc: pythonTechNewsGif,
 		title: "Python Tech News",
 		desc: "Tech blog for Python articles",
-		techTags: ["Python"],
+		techTags: ["Python", "Flask", "SQLAlchemy", "Jinja"],
 		gitSrc: "https://github.com/alexgeis/tech-news",
 		deployLink: "https://tech-news-production.up.railway.app/",
 	},

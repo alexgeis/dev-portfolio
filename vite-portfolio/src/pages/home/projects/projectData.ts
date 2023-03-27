@@ -76,8 +76,8 @@ export const projectData: ProjectDataObjProps[] = [
 			"User auth w/ SQLAlchemy ORM",
 			"and more...",
 		],
-		gitSrc: "https://github.com/alexgeis/ghosthop",
-		deployLink: "https://ghosthop.vercel.app/",
+		gitSrc: "https://github.com/alexgeis/tech-news",
+		deployLink: "https://tech-news-production.up.railway.app/",
 		techTags: ["Python", "Flask", "SQLAlchemy", "Jinja"],
 	},
 	{
